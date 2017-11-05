@@ -1,2 +1,2 @@
 all:
-	gcc -w memory_allocator.c -o prueba
+	gcc algorithms.c getDataFromFile.c main.c memoryListFunctions.c myheader.h -o prueba
