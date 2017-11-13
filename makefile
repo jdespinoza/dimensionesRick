@@ -1,3 +1,2 @@
 all:
-	g++ -o brickBreaker main.cpp -lSDLmain -lSDL -lGL -lSDL_image
-
+	g++ -o test tron.cpp -lSDLmain -lSDL -lGL -lSDL_image
