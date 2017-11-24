@@ -1,12 +1,5 @@
 #include "myheader.h"
 
-
-/********************************************************************************/
-/* function to create new node with input data as character type in linked list */
-///////////////////////////////////////
-/////////////////////////////////////////
-/////////////////////////////////////////
-/////////////////////////////////////////
 _NODE* _createNewNode(char data)
 {
     _NODE *newNode = NULL;
@@ -20,13 +13,6 @@ _NODE* _createNewNode(char data)
     return newNode;
 }
 
-
-/***************************************************************************/
-/* function create new node with input data as integer type in linked list */
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////
-/////////////////////////////////////////////////
 _INTNODE* _intcreateNewNode(int data)
 {
     _INTNODE *newNode = NULL;
@@ -40,12 +26,9 @@ _INTNODE* _intcreateNewNode(int data)
     return newNode;
 }
 
-/*******************************************************************/
-/* function to insert new node of type character at the end of list */
-//////////////////////////////////////////
-//////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
+/*
+ * crea un nuevo nodo al final de la lista head
+ */
 _NODE* _insertAtEnd(char data, _NODE **head)
 {
     _NODE *current = *head;
@@ -60,13 +43,9 @@ _NODE* _insertAtEnd(char data, _NODE **head)
     return *head;
 }
 
-
-/******************************************************************/
-/* function to insert new node of type integer at the end of list */
-/////////////////////////////////////////////////
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-////////////////////////////////////////////////////
+/*
+ * Inserta un nuevo nodo en la lista enlazada de enteros
+ */
 _INTNODE* _intinsertAtEnd(int data, _INTNODE **head)
 {
     _INTNODE *current = *head;
@@ -81,13 +60,9 @@ _INTNODE* _intinsertAtEnd(int data, _INTNODE **head)
     return *head;
 }
 
-
-/*******************************************************************************************/
-/* function to remove nodes when more than one space characters occures in the linked list */
-//////////////////////////////////////
-/////////////////////////////////////
-////////////////////////////////////
-////////////////////////////////////
+/*
+ * elimina los nodos con espacios en blanco
+ */
 _NODE* _removeExtraSpaces(_NODE** head)
 {
     _NODE*current = *head;
@@ -104,27 +79,9 @@ _NODE* _removeExtraSpaces(_NODE** head)
     return *head;
 }
 
-
-/*******************************************************/
-/* function to count nodes of integer type linked list */
 /*
-int _countINTNodes(_INTNODE *head)
-{
-    int count=0;
-    while(head != NULL){
-        count++;
-        head=head->next;
-  }
-    return count;
-}
-*/
-
-/*************************************************/
-/* function to delete character type linked list */
-////////////////////////////////////////////////
-//////////////////////////////////////////////////
-/////////////////////////////////////////////
-/////////////////////////////////////////////
+ * Se elimina cada nodo de la lista enlazada de caracteres
+ */
 void _deleteCharList(_NODE **head)
 {
     _NODE *current = *head;
@@ -135,27 +92,11 @@ void _deleteCharList(_NODE **head)
     }
 }
 
-
-/*********************************************/
-/* function to delete intger type linked list */
 /*
-void _deleteINTList(_INTNODE **inthead)
-{
-    _INTNODE *current = *inthead;
-    while(current != NULL){
-        *inthead = current->next;
-        free(current);
-        current=*inthead;
-    }
-}
-*/
-
-/***********************************************************/
-/* function to delete front node from integer type of list */
-/////////////////////////////////////////////////
-///////////////////////////////////////////////
-////////////////////////////////////////////////
-/////////////////////////////////////////////////
+ * elimina el primer nodo de la lista enlazada
+ * de numeros enteros, ya que puede contener basura
+ * y esto puede provocar un comportamiento no deseado
+ */
 _INTNODE *_deleteINTFront(_INTNODE **inthead)
 {
     _INTNODE *current = *inthead;
@@ -170,64 +111,10 @@ _INTNODE *_deleteINTFront(_INTNODE **inthead)
     return *inthead;
 }
 
-
-/**********************************************************/
-/* function to delete last node from integer type of list */
 /*
-_INTNODE *_deleteINTEnd(_INTNODE **inthead)
-{
-    _INTNODE *current = *inthead;
-
-    if(_countINTNodes(current) >= 2){
-        while((current->next)->next != NULL){
-            current=current->next;
-        }
-        free(current->next);
-        current->next=NULL;
-    }else{
-        return _deleteINTFront(&(*inthead));
-    }
-
-    return *inthead;
-}
-*/
-
-/*************************************************************************************/
-/* function to delete node when its data is 0, starting from second node of the list */
-/*
-_INTNODE* _deleteINT_FromSecondNode(_INTNODE **inthead)
-{
-    _INTNODE *headTemp = *inthead;
-    if(_countINTNodes(*inthead) > 1){
-        _INTNODE*current = (*inthead)->next;
-
-        while(current != NULL){
-            if(current->data == 0){
-                headTemp->next = current->next;
-                free(current);
-                current = headTemp->next;
-            }else{
-                break;
-            }
-        }
-    }
-    return headTemp;
-}
-*/
-
-/**********************************************************************************************/
-//get each char node value from _NODE structure,
-// insert node with data space at the end,
-//check if that data is space or not,
-//if it is space then insertNewNode at the end of integer type of linked list using atoi() function,
-//otherwise hold that value in variable(holdstr),
-//this function separate the data,what we actually want from file
-// e.g: 1 2 45  67  234  943  (each are separate characters in char type linked list,9,4 & 3 are characters)
-// returns: 1 2 45 67 234 943 (each are integers stored in integer type of linked list)
-////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
+ * Forma una lista enlazada (inthead) con los numeros de tipo int
+ * es decir, lo que antes era 2 4 1 5, ahora es 2415, los une
+ */
 void _separateNumbDatas(_NODE *head, _INTNODE **inthead)
 {
     head = _insertAtEnd(' ',&head);
@@ -250,13 +137,10 @@ void _separateNumbDatas(_NODE *head, _INTNODE **inthead)
         }
 }
 
-
-/*********************************************************/
-/* function to read file by skipping comments & 
-call above functions to make integer type of linked list*/
-//////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-/////////////////////////////////////////////////////
+/*
+ * Lee el archivo ignorando los # y hace una lista enlazada
+ * con los numeros que lee
+ */
 _INTNODE *getProcessData(const char *filename)
 {
     _NODE* head = NULL;
@@ -271,7 +155,7 @@ _INTNODE *getProcessData(const char *filename)
         exit(0);
     }
 
-    //read each character from file
+    //lee cada caracter del archivo
     do{
         readData = getc(fp);
         if(readData == ' '&& !flag){
@@ -284,8 +168,7 @@ _INTNODE *getProcessData(const char *filename)
         if(readData=='\t'){
             readData=' ';
         }
-        /* check # character and EOF character occurs or not
-        when # sign occurs keep reading data from file without adding it to list */
+        //si hay # los ignora
         if(readData == '#'){
             readData = ' ';
             char ch;
@@ -294,7 +177,7 @@ _INTNODE *getProcessData(const char *filename)
             readData = '\n';
         }
                     
-        //inserting each char value to linked list
+        //se inserta cada caracter en el head
         if(flag){
             head = _insertAtEnd(readData,&head);
         }
@@ -303,18 +186,19 @@ _INTNODE *getProcessData(const char *filename)
 
     fclose(fp);
 
-    //remove extra spaces from char type linked list
+    //se elimina los nodos con espacios en blanco
     for(int i=0;i<5;i++){
        head = _removeExtraSpaces(&head);
     }
 
-    //separate integer data values & store them into new linked list(inthead)
+    //da forma a una nueva lista enlazada (inthead)
+    //con todos los numeros que se leyeron
     _separateNumbDatas(head,&inthead);
 
-    //delete unnecessary character(0),which is head
+    //elimina el primer nodo (head)
     _deleteINTFront(&inthead); 
 
-    //once intger list is created,then delete the character type list
+    //head ya no se usa, asi que se elimina para liberar memoria
     _deleteCharList(&head);
     free(head);
 
