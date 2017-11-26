@@ -1,8 +1,5 @@
 #include "myheader.h"
 
-
-/***************************************************************************/
-/* function create new node with input data as integer type in linked list _PROCINTNODE*/
 _PROCINTNODE* _procintcreateNewNode(int process, int size)
 {
     _PROCINTNODE *newNode = NULL;
@@ -17,9 +14,9 @@ _PROCINTNODE* _procintcreateNewNode(int process, int size)
     return newNode;
 }
 
-
-/***************************************************************************/
-/* function create new node of _VIRTMEMPAGEBLOCKS of linked list */
+/*
+ * Crea un nuevo nodo
+ */
 _VIRTMEMPAGEBLOCKS* _virtmempageblockscreateNewNode(int process, size_t size, int pagenumber, void *memoryaddress)
 {
     _VIRTMEMPAGEBLOCKS *newNode = NULL;
@@ -36,9 +33,9 @@ _VIRTMEMPAGEBLOCKS* _virtmempageblockscreateNewNode(int process, size_t size, in
     return newNode;
 }
 
-
-/***************************************************************************/
-/* function to insert new node at the end of list _PROCINTNODE */
+/*
+ * Inserta un nuevo nodo al final de la lista de PROCINTNODE
+ */
 _PROCINTNODE* _procintinsertAtEnd(int process, int size, _PROCINTNODE **head)
 {
     _PROCINTNODE *current = *head;
@@ -53,10 +50,9 @@ _PROCINTNODE* _procintinsertAtEnd(int process, int size, _PROCINTNODE **head)
     return *head;
 }
 
-
-
-/***************************************************************************/
-/* function to insert new node at the end of list _VIRTMEMPAGEBLOCKS */
+/*
+ * Inserta un nodo al final de lista enlazada de la memoria virtual
+ */
 _VIRTMEMPAGEBLOCKS* _virtmempageblocksinsertAtEnd(int process,size_t size,int pagenumber,
                                                 void *memoryaddress, _VIRTMEMPAGEBLOCKS **head)
 {
@@ -72,17 +68,17 @@ _VIRTMEMPAGEBLOCKS* _virtmempageblocksinsertAtEnd(int process,size_t size,int pa
     return *head;
 }
 
-
-/***************************************************************************/
-/* function to create new list of _PROCINTNODE by reading data from _INTNODE list */
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
+/*
+ * Crea una nueva lista de _PROCINTNODE, segun lo leido de la lista
+ * de INTNODE
+ */
 _PROCINTNODE *getDataFromINTNODEList(_INTNODE *inthead, _PROCINTNODE **prochead)
 {
     _INTNODE *current = inthead;
     int count = 0;
     int process;
+    //no hace falta inicializar process con un valor porque siempre se
+    //cumplen las condiciones deseadas
     while(current != NULL){
         count++;
         switch(count){
@@ -99,66 +95,3 @@ _PROCINTNODE *getDataFromINTNODEList(_INTNODE *inthead, _PROCINTNODE **prochead)
     }
     return *prochead;
 }
-
-
-/***************************************************************************/
-/* function that returns total memory size required by all processes */
-int getProcessMemSizeSum(_PROCINTNODE *procinthead)
-{
-    int sum = 0;
-    while(procinthead != NULL){
-        sum += procinthead->size;
-        procinthead = procinthead->next;
-    }
-    return sum;
-}
-
-
-
-/*******************************************************/
-/* function to count nodes of integer type linked list _PROCINTNODE*/
-int _countPROCINTNodes(_PROCINTNODE *prochead)
-{
-    int count = 0;
-    while(prochead != NULL){
-        count++;
-        prochead = prochead->next;
-  }
-    return count;
-}
-
-
-/**********************************************************************/
-/* function to delete node whose contain 0 value in _PROCINTNODE list */
-void _deleteProcINTNode_ZeroData(_PROCINTNODE **procinthead)
-{
-    _PROCINTNODE *current = *procinthead;
-    _PROCINTNODE *temp = *procinthead;
-
-    if(current == NULL) { }else{
-        if(_countPROCINTNodes(current) == 1){
-            if(current->size == 0){
-                *procinthead=NULL;
-                free(current);
-            }
-        }else{
-            while(current != NULL){
-                if(current->size == 0){
-                    temp->next = current->next;
-                    free(current);
-                    current = temp->next;
-                }else{
-                    temp = current;
-                    current = current->next;
-                }
-            }
-        }
-    }
-    current = *procinthead;
-    if(current-> size == 0){
-        *procinthead = current->next;
-    }
-}
-
-
-

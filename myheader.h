@@ -10,7 +10,7 @@
 #include<unistd.h>
 
 
-//maximum memory size 1MB
+//tamanio maximo de memoria 1MB
 #define MAX_MEM_SIZE (1024*1024)    // 1048576
 
 
@@ -22,7 +22,7 @@
 #define MAX_SEGMENT_SIZE 256000 //256 KB
 
 
-//structure for allocate memory using FCFS or all
+//estructua para ubicar memoria fisica usando FCFS o ALL
 typedef struct __s_block{
     struct __s_block *next;
     struct __s_block *prev;
@@ -35,8 +35,7 @@ typedef struct __s_block{
 #define BLOCK_SIZE sizeof(_SBLOCK)
 
 
-
-//structure for store virtual memory data using paging
+//estructura para almacenar en la memoria virtual usando paginas
 typedef struct __memvirtpageblocks{
     struct __memvirtpageblocks *next;
     size_t size;
@@ -46,7 +45,7 @@ typedef struct __memvirtpageblocks{
 }_VIRTMEMPAGEBLOCKS;
 
 
-//structure for allocate memory using paging
+//estructura para almacenar en la memoria fisica usando paginas
 typedef struct __mempageblocks{
     struct __mempageblocks *next;
     bool isfree;
@@ -57,7 +56,7 @@ typedef struct __mempageblocks{
 
 #define MEM_PAGE_BLOCK_SIZE sizeof(_MEMPAGEBLOCKS)
 
-
+//no se usa
 //structure for allocate memory using segmentation
 typedef struct __memsegmentblocks{
     struct __memsegmentblocks *next;
@@ -71,22 +70,19 @@ typedef struct __memsegmentblocks{
 #define MEM_SEGMENT_BLOCK_SIZE sizeof(_MEMSEGMENTBLOCKS)
 
 
-
-//structure to store information from file in character
+//estrctura que almacena informacion de un archivo en un caracter
 typedef struct __node {
     char data;
     struct __node *next;
 }_NODE;
 
-
-//structure to store integer data 
 typedef struct __intnode {
     int data;
     struct __intnode *next;
 }_INTNODE;
 
 
-//structure to store integer data 
+//estructura para almacenar datos enteros 
 typedef struct __procintnode {
     int process;
     int size;
@@ -94,10 +90,7 @@ typedef struct __procintnode {
 }_PROCINTNODE;
 
 
-
-/* declaring all functions here */
-
-/* following functions are defined in getDataFromFile.c, memoryListFunctions.c , algorithms.c files */
+//getDataFromFile.c, memoryListFunctions.c , algorithms.c
 extern _NODE* _createNewNode(char );
 extern _INTNODE* _intcreateNewNode(int );
 extern _NODE* _insertAtEnd(char , _NODE **);

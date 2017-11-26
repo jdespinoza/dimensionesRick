@@ -8,7 +8,7 @@ int main(int argc,char *argv[])
     _SBLOCK *s_blockHead = NULL;
     _VIRTMEMPAGEBLOCKS *virtmempageBlocks = NULL;
     _MEMPAGEBLOCKS *mempageBlocks = NULL;
-    _MEMSEGMENTBLOCKS *memSegBlocksHead = NULL;
+    //_MEMSEGMENTBLOCKS *memSegBlocksHead = NULL;
     
     /* reading options of type i & t
        -i = input file name
