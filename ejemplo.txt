@@ -1,0 +1,1087 @@
+
+
+	* Reading data from file "files/process_1.txt"......
+
+
+		[ Allocate memory using Paging ]
+
+
+[ Memory mapped Virtual/Physical Page Table ]
+
+-----------------------------------------------------------------------------------
+|    Process    |    PageNumber    |    VirtualAddress    |    PhysicalAddress    |
+-----------------------------------------------------------------------------------
+|       P1      |        0         |     0x12345678       |        0xf9c4dc      |
+|       P1      |        1         |     0x123458ce       |        0xf9c9b8      |
+|       P1      |        2         |     0x12345b24       |        0xf9ce94      |
+|       P1      |        3         |     0x12345d7a       |        0xf9d370      |
+|       P1      |        4         |     0x12345fd0       |        0xf9d84c      |
+|       P1      |        5         |     0x12346226       |        0xf9dd28      |
+|       P1      |        6         |     0x1234647c       |        0xf9e204      |
+|       P1      |        7         |     0x123466d2       |        0xf9e6e0      |
+|       P1      |        8         |     0x12346928       |        0xf9ebbc      |
+|       P1      |        9         |     0x12346b7e       |        0xf9f098      |
+|       P1      |        10         |     0x12346dd4       |        0xf9f574      |
+|       P1      |        11         |     0x1234702a       |        0xf9fa50      |
+|       P1      |        12         |     0x12347280       |        0xf9ff2c      |
+|       P1      |        13         |     0x123474d6       |        0xfa0408      |
+|       P1      |        14         |     0x1234772c       |        0xfa08e4      |
+|       P1      |        15         |     0x12347982       |        0xfa0dc0      |
+|       P1      |        16         |     0x12347bd8       |        0xfa129c      |
+|       P1      |        17         |     0x12347e2e       |        0xfa1778      |
+|       P1      |        18         |     0x12348084       |        0xfa1c54      |
+|       P1      |        19         |     0x123482da       |        0xfa2130      |
+|       P1      |        20         |     0x12348530       |        0xfa260c      |
+|       P1      |        21         |     0x12348786       |        0xfa2ae8      |
+|       P1      |        22         |     0x123489dc       |        0xfa2fc4      |
+|       P1      |        23         |     0x12348c32       |        0xfa34a0      |
+|       P1      |        24         |     0x12348e88       |        0xfa397c      |
+|       P1      |        25         |     0x123490de       |        0xfa3e58      |
+|       P1      |        26         |     0x12349334       |        0xfa4334      |
+|       P1      |        27         |     0x1234958a       |        0xfa4810      |
+|       P1      |        28         |     0x123497e0       |        0xfa4cec      |
+|       P1      |        29         |     0x12349a36       |        0xfa51c8      |
+|       P1      |        30         |     0x12349c8c       |        0xfa56a4      |
+|       P1      |        31         |     0x12349ee2       |        0xfa5b80      |
+|       P1      |        32         |     0x1234a138       |        0xfa605c      |
+|       P1      |        33         |     0x1234a38e       |        0xfa6538      |
+|       P1      |        34         |     0x1234a5e4       |        0xfa6a14      |
+|       P1      |        35         |     0x1234a83a       |        0xfa6ef0      |
+|       P1      |        36         |     0x1234aa90       |        0xfa73cc      |
+|       P1      |        37         |     0x1234ace6       |        0xfa78a8      |
+|       P1      |        38         |     0x1234af3c       |        0xfa7d84      |
+|       P1      |        39         |     0x1234b192       |        0xfa8260      |
+|       P1      |        40         |     0x1234b3e8       |        0xfa873c      |
+|       P1      |        41         |     0x1234b63e       |        0xfa8c18      |
+|       P1      |        42         |     0x1234b894       |        0xfa90f4      |
+|       P1      |        43         |     0x1234baea       |        0xfa95d0      |
+|       P1      |        44         |     0x1234bd40       |        0xfa9aac      |
+|       P1      |        45         |     0x1234bf96       |        0xfa9f88      |
+|       P1      |        46         |     0x1234c1ec       |        0xfaa464      |
+|       P1      |        47         |     0x1234c442       |        0xfaa940      |
+|       P1      |        48         |     0x1234c698       |        0xfaae1c      |
+|       P1      |        49         |     0x1234c8ee       |        0xfab2f8      |
+|       P1      |        50         |     0x1234cb44       |        0xfab7d4      |
+|       P1      |        51         |     0x1234cd9a       |        0xfabcb0      |
+|       P1      |        52         |     0x1234cff0       |        0xfac18c      |
+|       P1      |        53         |     0x1234d246       |        0xfac668      |
+|       P1      |        54         |     0x1234d49c       |        0xfacb44      |
+|       P1      |        55         |     0x1234d6f2       |        0xfad020      |
+|       P1      |        56         |     0x1234d948       |        0xfad4fc      |
+|       P1      |        57         |     0x1234db9e       |        0xfad9d8      |
+|       P1      |        58         |     0x1234ddf4       |        0xfadeb4      |
+|       P1      |        59         |     0x1234e04a       |        0xfae390      |
+|       P1      |        60         |     0x1234e2a0       |        0xfae86c      |
+|       P1      |        61         |     0x1234e4f6       |        0xfaed48      |
+|       P1      |        62         |     0x1234e74c       |        0xfaf224      |
+|       P1      |        63         |     0x1234e9a2       |        0xfaf700      |
+|       P1      |        64         |     0x1234ebf8       |        0xfafbdc      |
+|       P1      |        65         |     0x1234ee4e       |        0xfb00b8      |
+|       P1      |        66         |     0x1234f0a4       |        0xfb0594      |
+|       P1      |        67         |     0x1234f2fa       |        0xfb0a70      |
+|       P1      |        68         |     0x1234f550       |        0xfb0f4c      |
+|       P1      |        69         |     0x1234f7a6       |        0xfb1428      |
+|       P1      |        70         |     0x1234f9fc       |        0xfb1904      |
+|       P1      |        71         |     0x1234fc52       |        0xfb1de0      |
+|       P1      |        72         |     0x1234fea8       |        0xfb22bc      |
+|       P1      |        73         |     0x123500fe       |        0xfb2798      |
+|       P1      |        74         |     0x12350354       |        0xfb2c74      |
+|       P1      |        75         |     0x123505aa       |        0xfb3150      |
+|       P1      |        76         |     0x12350800       |        0xfb362c      |
+|       P1      |        77         |     0x12350a56       |        0xfb3b08      |
+|       P1      |        78         |     0x12350cac       |        0xfb3fe4      |
+|       P1      |        79         |     0x12350f02       |        0xfb44c0      |
+|       P1      |        80         |     0x12351158       |        0xfb499c      |
+|       P1      |        81         |     0x123513ae       |        0xfb4e78      |
+|       P1      |        82         |     0x12351604       |        0xfb5354      |
+|       P1      |        83         |     0x1235185a       |        0xfb5830      |
+|       P1      |        84         |     0x12351ab0       |        0xfb5d0c      |
+|       P1      |        85         |     0x12351d06       |        0xfb61e8      |
+|       P1      |        86         |     0x12351f5c       |        0xfb66c4      |
+|       P1      |        87         |     0x123521b2       |        0xfb6ba0      |
+|       P1      |        88         |     0x12352408       |        0xfb707c      |
+|       P1      |        89         |     0x1235265e       |        0xfb7558      |
+|       P1      |        90         |     0x123528b4       |        0xfb7a34      |
+|       P1      |        91         |     0x12352b0a       |        0xfb7f10      |
+|       P1      |        92         |     0x12352d60       |        0xfb83ec      |
+|       P1      |        93         |     0x12352fb6       |        0xfb88c8      |
+|       P1      |        94         |     0x1235320c       |        0xfb8da4      |
+|       P1      |        95         |     0x12353462       |        0xfb9280      |
+|       P1      |        96         |     0x123536b8       |        0xfb975c      |
+|       P1      |        97         |     0x1235390e       |        0xfb9c38      |
+|       P1      |        98         |     0x12353b64       |        0xfba114      |
+|       P1      |        99         |     0x12353dba       |        0xfba5f0      |
+|       P1      |        100         |     0x12354010       |        0xfbaacc      |
+|       P1      |        101         |     0x12354266       |        0xfbafa8      |
+|       P1      |        102         |     0x123544bc       |        0xfbb484      |
+|       P1      |        103         |     0x12354712       |        0xfbb960      |
+|       P1      |        104         |     0x12354968       |        0xfbbe3c      |
+|       P1      |        105         |     0x12354bbe       |        0xfbc318      |
+|       P1      |        106         |     0x12354e14       |        0xfbc7f4      |
+|       P1      |        107         |     0x1235506a       |        0xfbccd0      |
+|       P1      |        108         |     0x123552c0       |        0xfbd1ac      |
+|       P1      |        109         |     0x12355516       |        0xfbd688      |
+|       P1      |        110         |     0x1235576c       |        0xfbdb64      |
+|       P1      |        111         |     0x123559c2       |        0xfbe040      |
+|       P1      |        112         |     0x12355c18       |        0xfbe51c      |
+|       P1      |        113         |     0x12355e6e       |        0xfbe9f8      |
+|       P1      |        114         |     0x123560c4       |        0xfbeed4      |
+|       P1      |        115         |     0x1235631a       |        0xfbf3b0      |
+|       P1      |        116         |     0x12356570       |        0xfbf88c      |
+|       P1      |        117         |     0x123567c6       |        0xfbfd68      |
+|       P1      |        118         |     0x12356a1c       |        0xfc0244      |
+|       P1      |        119         |     0x12356c72       |        0xfc0720      |
+|       P1      |        120         |     0x12356ec8       |        0xfc0bfc      |
+|       P1      |        121         |     0x1235711e       |        0xfc10d8      |
+|       P1      |        122         |     0x12357374       |        0xfc15b4      |
+|       P1      |        123         |     0x123575ca       |        0xfc1a90      |
+|       P1      |        124         |     0x12357820       |        0xfc1f6c      |
+|       P1      |        125         |     0x12357a76       |        0xfc2448      |
+|       P1      |        126         |     0x12357ccc       |        0xfc2924      |
+|       P1      |        127         |     0x12357f22       |        0xfc2e00      |
+|       P1      |        128         |     0x12358178       |        0xfc32dc      |
+|       P1      |        129         |     0x123583ce       |        0xfc37b8      |
+|       P1      |        130         |     0x12358624       |        0xfc3c94      |
+|       P1      |        131         |     0x1235887a       |        0xfc4170      |
+|       P1      |        132         |     0x12358ad0       |        0xfc464c      |
+|       P1      |        133         |     0x12358d26       |        0xfc4b28      |
+|       P1      |        134         |     0x12358f7c       |        0xfc5004      |
+|       P1      |        135         |     0x123591d2       |        0xfc54e0      |
+|       P1      |        136         |     0x12359428       |        0xfc59bc      |
+|       P1      |        137         |     0x1235967e       |        0xfc5e98      |
+|       P1      |        138         |     0x123598d4       |        0xfc6374      |
+|       P1      |        139         |     0x12359b2a       |        0xfc6850      |
+|       P1      |        140         |     0x12359d80       |        0xfc6d2c      |
+|       P1      |        141         |     0x12359fd6       |        0xfc7208      |
+|       P1      |        142         |     0x1235a22c       |        0xfc76e4      |
+|       P1      |        143         |     0x1235a482       |        0xfc7bc0      |
+|       P1      |        144         |     0x1235a6d8       |        0xfc809c      |
+|       P1      |        145         |     0x1235a92e       |        0xfc8578      |
+|       P1      |        146         |     0x1235ab84       |        0xfc8a54      |
+|       P1      |        147         |     0x1235adda       |        0xfc8f30      |
+|       P1      |        148         |     0x1235b030       |        0xfc940c      |
+|       P1      |        149         |     0x1235b286       |        0xfc98e8      |
+|       P1      |        150         |     0x1235b4dc       |        0xfc9dc4      |
+|       P1      |        151         |     0x1235b732       |        0xfca2a0      |
+|       P1      |        152         |     0x1235b988       |        0xfca77c      |
+|       P1      |        153         |     0x1235bbde       |        0xfcac58      |
+|       P1      |        154         |     0x1235be34       |        0xfcb134      |
+|       P1      |        155         |     0x1235c08a       |        0xfcb610      |
+|       P1      |        156         |     0x1235c2e0       |        0xfcbaec      |
+|       P1      |        157         |     0x1235c536       |        0xfcbfc8      |
+|       P1      |        158         |     0x1235c78c       |        0xfcc4a4      |
+|       P1      |        159         |     0x1235c9e2       |        0xfcc980      |
+|       P1      |        160         |     0x1235cc38       |        0xfcce5c      |
+|       P1      |        161         |     0x1235ce8e       |        0xfcd338      |
+|       P1      |        162         |     0x1235d0e4       |        0xfcd814      |
+|       P1      |        163         |     0x1235d33a       |        0xfcdcf0      |
+|       P1      |        164         |     0x1235d590       |        0xfce1cc      |
+|       P1      |        165         |     0x1235d7e6       |        0xfce6a8      |
+|       P1      |        166         |     0x1235da3c       |        0xfceb84      |
+|       P1      |        167         |     0x1235dc92       |        0xfcf060      |
+|       P1      |        168         |     0x1235dee8       |        0xfcf53c      |
+|       P1      |        169         |     0x1235e13e       |        0xfcfa18      |
+|       P1      |        170         |     0x1235e394       |        0xfcfef4      |
+|       P1      |        171         |     0x1235e5ea       |        0xfd03d0      |
+|       P1      |        172         |     0x1235e840       |        0xfd08ac      |
+|       P1      |        173         |     0x1235ea96       |        0xfd0d88      |
+|       P1      |        174         |     0x1235ecec       |        0xfd1264      |
+|       P1      |        175         |     0x1235ef42       |        0xfd1740      |
+|       P1      |        176         |     0x1235f198       |        0xfd1c1c      |
+|       P1      |        177         |     0x1235f3ee       |        0xfd20f8      |
+|       P1      |        178         |     0x1235f644       |        0xfd25d4      |
+|       P1      |        179         |     0x1235f89a       |        0xfd2ab0      |
+|       P1      |        180         |     0x1235faf0       |        0xfd2f8c      |
+|       P1      |        181         |     0x1235fd46       |        0xfd3468      |
+|       P1      |        182         |     0x1235ff9c       |        0xfd3944      |
+|       P1      |        183         |     0x123601f2       |        0xfd3e20      |
+|       P1      |        184         |     0x12360448       |        0xfd42fc      |
+|       P1      |        185         |     0x1236069e       |        0xfd47d8      |
+|       P1      |        186         |     0x123608f4       |        0xfd4cb4      |
+|       P1      |        187         |     0x12360b4a       |        0xfd5190      |
+|       P1      |        188         |     0x12360da0       |        0xfd566c      |
+|       P1      |        189         |     0x12360ff6       |        0xfd5b48      |
+|       P1      |        190         |     0x1236124c       |        0xfd6024      |
+|       P1      |        191         |     0x123614a2       |        0xfd6500      |
+|       P1      |        192         |     0x123616f8       |        0xfd69dc      |
+|       P1      |        193         |     0x1236194e       |        0xfd6eb8      |
+|       P1      |        194         |     0x12361ba4       |        0xfd7394      |
+|       P1      |        195         |     0x12361dfa       |        0xfd7870      |
+|       P1      |        196         |     0x12362050       |        0xfd7d4c      |
+|       P1      |        197         |     0x123622a6       |        0xfd8228      |
+|       P1      |        198         |     0x123624fc       |        0xfd8704      |
+|       P1      |        199         |     0x12362752       |        0xfd8be0      |
+|       P1      |        200         |     0x123629a8       |        0xfd90bc      |
+|       P1      |        201         |     0x12362bfe       |        0xfd9598      |
+|       P1      |        202         |     0x12362e54       |        0xfd9a74      |
+|       P1      |        203         |     0x123630aa       |        0xfd9f50      |
+|       P1      |        204         |     0x12363300       |        0xfda42c      |
+|       P1      |        205         |     0x12363556       |        0xfda908      |
+|       P1      |        206         |     0x123637ac       |        0xfdade4      |
+|       P1      |        207         |     0x12363a02       |        0xfdb2c0      |
+|       P1      |        208         |     0x12363c58       |        0xfdb79c      |
+|       P1      |        209         |     0x12363eae       |        0xfdbc78      |
+|       P1      |        210         |     0x12364104       |        0xfdc154      |
+|       P1      |        211         |     0x1236435a       |        0xfdc630      |
+|       P1      |        212         |     0x123645b0       |        0xfdcb0c      |
+|       P1      |        213         |     0x12364806       |        0xfdcfe8      |
+|       P1      |        214         |     0x12364a5c       |        0xfdd4c4      |
+|       P1      |        215         |     0x12364cb2       |        0xfdd9a0      |
+|       P1      |        216         |     0x12364f08       |        0xfdde7c      |
+|       P1      |        217         |     0x1236515e       |        0xfde358      |
+|       P1      |        218         |     0x123653b4       |        0xfde834      |
+|       P1      |        219         |     0x1236560a       |        0xfded10      |
+|       P1      |        220         |     0x12365860       |        0xfdf1ec      |
+|       P1      |        221         |     0x12365ab6       |        0xfdf6c8      |
+|       P1      |        222         |     0x12365d0c       |        0xfdfba4      |
+|       P1      |        223         |     0x12365f62       |        0xfe0080      |
+|       P1      |        224         |     0x123661b8       |        0xfe055c      |
+|       P1      |        225         |     0x1236640e       |        0xfe0a38      |
+|       P1      |        226         |     0x12366664       |        0xfe0f14      |
+|       P1      |        227         |     0x123668ba       |        0xfe13f0      |
+|       P1      |        228         |     0x12366b10       |        0xfe18cc      |
+|       P1      |        229         |     0x12366d66       |        0xfe1da8      |
+|       P1      |        230         |     0x12366fbc       |        0xfe2284      |
+|       P1      |        231         |     0x12367212       |        0xfe2760      |
+|       P1      |        232         |     0x12367468       |        0xfe2c3c      |
+|       P1      |        233         |     0x123676be       |        0xfe3118      |
+|       P1      |        234         |     0x12367914       |        0xfe35f4      |
+|       P2      |        234         |     0x12367914       |        0xfe3ad0      |
+|       P2      |        235         |     0x12367b6a       |        0xfe3fac      |
+|       P2      |        236         |     0x12367dc0       |        0xfe4488      |
+|       P2      |        237         |     0x12368016       |        0xfe4964      |
+|       P2      |        238         |     0x1236826c       |        0xfe4e40      |
+|       P2      |        239         |     0x123684c2       |        0xfe531c      |
+|       P2      |        240         |     0x12368718       |        0xfe57f8      |
+|       P2      |        241         |     0x1236896e       |        0xfe5cd4      |
+|       P2      |        242         |     0x12368bc4       |        0xfe61b0      |
+|       P2      |        243         |     0x12368e1a       |        0xfe668c      |
+|       P2      |        244         |     0x12369070       |        0xfe6b68      |
+|       P2      |        245         |     0x123692c6       |        0xfe7044      |
+|       P2      |        246         |     0x1236951c       |        0xfe7520      |
+|       P2      |        247         |     0x12369772       |        0xfe79fc      |
+|       P2      |        248         |     0x123699c8       |        0xfe7ed8      |
+|       P2      |        249         |     0x12369c1e       |        0xfe83b4      |
+|       P2      |        250         |     0x12369e74       |        0xfe8890      |
+|       P2      |        251         |     0x1236a0ca       |        0xfe8d6c      |
+|       P2      |        252         |     0x1236a320       |        0xfe9248      |
+|       P2      |        253         |     0x1236a576       |        0xfe9724      |
+|       P2      |        254         |     0x1236a7cc       |        0xfe9c00      |
+***- 1MB block of pages loaded -***
+-----------------------------------------------------------------------------------
+Memory Frame freed, Address = 0xf9c4dc
+Memory Frame freed, Address = 0xf9c9b8
+Memory Frame freed, Address = 0xf9ce94
+Memory Frame freed, Address = 0xf9d370
+Memory Frame freed, Address = 0xf9d84c
+Memory Frame freed, Address = 0xf9dd28
+Memory Frame freed, Address = 0xf9e204
+Memory Frame freed, Address = 0xf9e6e0
+Memory Frame freed, Address = 0xf9ebbc
+Memory Frame freed, Address = 0xf9f098
+Memory Frame freed, Address = 0xf9f574
+Memory Frame freed, Address = 0xf9fa50
+Memory Frame freed, Address = 0xf9ff2c
+Memory Frame freed, Address = 0xfa0408
+Memory Frame freed, Address = 0xfa08e4
+Memory Frame freed, Address = 0xfa0dc0
+Memory Frame freed, Address = 0xfa129c
+Memory Frame freed, Address = 0xfa1778
+Memory Frame freed, Address = 0xfa1c54
+Memory Frame freed, Address = 0xfa2130
+Memory Frame freed, Address = 0xfa260c
+Memory Frame freed, Address = 0xfa2ae8
+Memory Frame freed, Address = 0xfa2fc4
+Memory Frame freed, Address = 0xfa34a0
+Memory Frame freed, Address = 0xfa397c
+Memory Frame freed, Address = 0xfa3e58
+Memory Frame freed, Address = 0xfa4334
+Memory Frame freed, Address = 0xfa4810
+Memory Frame freed, Address = 0xfa4cec
+Memory Frame freed, Address = 0xfa51c8
+Memory Frame freed, Address = 0xfa56a4
+Memory Frame freed, Address = 0xfa5b80
+Memory Frame freed, Address = 0xfa605c
+Memory Frame freed, Address = 0xfa6538
+Memory Frame freed, Address = 0xfa6a14
+Memory Frame freed, Address = 0xfa6ef0
+Memory Frame freed, Address = 0xfa73cc
+Memory Frame freed, Address = 0xfa78a8
+Memory Frame freed, Address = 0xfa7d84
+Memory Frame freed, Address = 0xfa8260
+Memory Frame freed, Address = 0xfa873c
+Memory Frame freed, Address = 0xfa8c18
+Memory Frame freed, Address = 0xfa90f4
+Memory Frame freed, Address = 0xfa95d0
+Memory Frame freed, Address = 0xfa9aac
+Memory Frame freed, Address = 0xfa9f88
+Memory Frame freed, Address = 0xfaa464
+Memory Frame freed, Address = 0xfaa940
+Memory Frame freed, Address = 0xfaae1c
+Memory Frame freed, Address = 0xfab2f8
+Memory Frame freed, Address = 0xfab7d4
+Memory Frame freed, Address = 0xfabcb0
+Memory Frame freed, Address = 0xfac18c
+Memory Frame freed, Address = 0xfac668
+Memory Frame freed, Address = 0xfacb44
+Memory Frame freed, Address = 0xfad020
+Memory Frame freed, Address = 0xfad4fc
+Memory Frame freed, Address = 0xfad9d8
+Memory Frame freed, Address = 0xfadeb4
+Memory Frame freed, Address = 0xfae390
+Memory Frame freed, Address = 0xfae86c
+Memory Frame freed, Address = 0xfaed48
+Memory Frame freed, Address = 0xfaf224
+Memory Frame freed, Address = 0xfaf700
+Memory Frame freed, Address = 0xfafbdc
+Memory Frame freed, Address = 0xfb00b8
+Memory Frame freed, Address = 0xfb0594
+Memory Frame freed, Address = 0xfb0a70
+Memory Frame freed, Address = 0xfb0f4c
+Memory Frame freed, Address = 0xfb1428
+Memory Frame freed, Address = 0xfb1904
+Memory Frame freed, Address = 0xfb1de0
+Memory Frame freed, Address = 0xfb22bc
+Memory Frame freed, Address = 0xfb2798
+Memory Frame freed, Address = 0xfb2c74
+Memory Frame freed, Address = 0xfb3150
+Memory Frame freed, Address = 0xfb362c
+Memory Frame freed, Address = 0xfb3b08
+Memory Frame freed, Address = 0xfb3fe4
+Memory Frame freed, Address = 0xfb44c0
+Memory Frame freed, Address = 0xfb499c
+Memory Frame freed, Address = 0xfb4e78
+Memory Frame freed, Address = 0xfb5354
+Memory Frame freed, Address = 0xfb5830
+Memory Frame freed, Address = 0xfb5d0c
+Memory Frame freed, Address = 0xfb61e8
+Memory Frame freed, Address = 0xfb66c4
+Memory Frame freed, Address = 0xfb6ba0
+Memory Frame freed, Address = 0xfb707c
+Memory Frame freed, Address = 0xfb7558
+Memory Frame freed, Address = 0xfb7a34
+Memory Frame freed, Address = 0xfb7f10
+Memory Frame freed, Address = 0xfb83ec
+Memory Frame freed, Address = 0xfb88c8
+Memory Frame freed, Address = 0xfb8da4
+Memory Frame freed, Address = 0xfb9280
+Memory Frame freed, Address = 0xfb975c
+Memory Frame freed, Address = 0xfb9c38
+Memory Frame freed, Address = 0xfba114
+Memory Frame freed, Address = 0xfba5f0
+Memory Frame freed, Address = 0xfbaacc
+Memory Frame freed, Address = 0xfbafa8
+Memory Frame freed, Address = 0xfbb484
+Memory Frame freed, Address = 0xfbb960
+Memory Frame freed, Address = 0xfbbe3c
+Memory Frame freed, Address = 0xfbc318
+Memory Frame freed, Address = 0xfbc7f4
+Memory Frame freed, Address = 0xfbccd0
+Memory Frame freed, Address = 0xfbd1ac
+Memory Frame freed, Address = 0xfbd688
+Memory Frame freed, Address = 0xfbdb64
+Memory Frame freed, Address = 0xfbe040
+Memory Frame freed, Address = 0xfbe51c
+Memory Frame freed, Address = 0xfbe9f8
+Memory Frame freed, Address = 0xfbeed4
+Memory Frame freed, Address = 0xfbf3b0
+Memory Frame freed, Address = 0xfbf88c
+Memory Frame freed, Address = 0xfbfd68
+Memory Frame freed, Address = 0xfc0244
+Memory Frame freed, Address = 0xfc0720
+Memory Frame freed, Address = 0xfc0bfc
+Memory Frame freed, Address = 0xfc10d8
+Memory Frame freed, Address = 0xfc15b4
+Memory Frame freed, Address = 0xfc1a90
+Memory Frame freed, Address = 0xfc1f6c
+Memory Frame freed, Address = 0xfc2448
+Memory Frame freed, Address = 0xfc2924
+Memory Frame freed, Address = 0xfc2e00
+Memory Frame freed, Address = 0xfc32dc
+Memory Frame freed, Address = 0xfc37b8
+Memory Frame freed, Address = 0xfc3c94
+Memory Frame freed, Address = 0xfc4170
+Memory Frame freed, Address = 0xfc464c
+Memory Frame freed, Address = 0xfc4b28
+Memory Frame freed, Address = 0xfc5004
+Memory Frame freed, Address = 0xfc54e0
+Memory Frame freed, Address = 0xfc59bc
+Memory Frame freed, Address = 0xfc5e98
+Memory Frame freed, Address = 0xfc6374
+Memory Frame freed, Address = 0xfc6850
+Memory Frame freed, Address = 0xfc6d2c
+Memory Frame freed, Address = 0xfc7208
+Memory Frame freed, Address = 0xfc76e4
+Memory Frame freed, Address = 0xfc7bc0
+Memory Frame freed, Address = 0xfc809c
+Memory Frame freed, Address = 0xfc8578
+Memory Frame freed, Address = 0xfc8a54
+Memory Frame freed, Address = 0xfc8f30
+Memory Frame freed, Address = 0xfc940c
+Memory Frame freed, Address = 0xfc98e8
+Memory Frame freed, Address = 0xfc9dc4
+Memory Frame freed, Address = 0xfca2a0
+Memory Frame freed, Address = 0xfca77c
+Memory Frame freed, Address = 0xfcac58
+Memory Frame freed, Address = 0xfcb134
+Memory Frame freed, Address = 0xfcb610
+Memory Frame freed, Address = 0xfcbaec
+Memory Frame freed, Address = 0xfcbfc8
+Memory Frame freed, Address = 0xfcc4a4
+Memory Frame freed, Address = 0xfcc980
+Memory Frame freed, Address = 0xfcce5c
+Memory Frame freed, Address = 0xfcd338
+Memory Frame freed, Address = 0xfcd814
+Memory Frame freed, Address = 0xfcdcf0
+Memory Frame freed, Address = 0xfce1cc
+Memory Frame freed, Address = 0xfce6a8
+Memory Frame freed, Address = 0xfceb84
+Memory Frame freed, Address = 0xfcf060
+Memory Frame freed, Address = 0xfcf53c
+Memory Frame freed, Address = 0xfcfa18
+Memory Frame freed, Address = 0xfcfef4
+Memory Frame freed, Address = 0xfd03d0
+Memory Frame freed, Address = 0xfd08ac
+Memory Frame freed, Address = 0xfd0d88
+Memory Frame freed, Address = 0xfd1264
+Memory Frame freed, Address = 0xfd1740
+Memory Frame freed, Address = 0xfd1c1c
+Memory Frame freed, Address = 0xfd20f8
+Memory Frame freed, Address = 0xfd25d4
+Memory Frame freed, Address = 0xfd2ab0
+Memory Frame freed, Address = 0xfd2f8c
+Memory Frame freed, Address = 0xfd3468
+Memory Frame freed, Address = 0xfd3944
+Memory Frame freed, Address = 0xfd3e20
+Memory Frame freed, Address = 0xfd42fc
+Memory Frame freed, Address = 0xfd47d8
+Memory Frame freed, Address = 0xfd4cb4
+Memory Frame freed, Address = 0xfd5190
+Memory Frame freed, Address = 0xfd566c
+Memory Frame freed, Address = 0xfd5b48
+Memory Frame freed, Address = 0xfd6024
+Memory Frame freed, Address = 0xfd6500
+Memory Frame freed, Address = 0xfd69dc
+Memory Frame freed, Address = 0xfd6eb8
+Memory Frame freed, Address = 0xfd7394
+Memory Frame freed, Address = 0xfd7870
+Memory Frame freed, Address = 0xfd7d4c
+Memory Frame freed, Address = 0xfd8228
+Memory Frame freed, Address = 0xfd8704
+Memory Frame freed, Address = 0xfd8be0
+Memory Frame freed, Address = 0xfd90bc
+Memory Frame freed, Address = 0xfd9598
+Memory Frame freed, Address = 0xfd9a74
+Memory Frame freed, Address = 0xfd9f50
+Memory Frame freed, Address = 0xfda42c
+Memory Frame freed, Address = 0xfda908
+Memory Frame freed, Address = 0xfdade4
+Memory Frame freed, Address = 0xfdb2c0
+Memory Frame freed, Address = 0xfdb79c
+Memory Frame freed, Address = 0xfdbc78
+Memory Frame freed, Address = 0xfdc154
+Memory Frame freed, Address = 0xfdc630
+Memory Frame freed, Address = 0xfdcb0c
+Memory Frame freed, Address = 0xfdcfe8
+Memory Frame freed, Address = 0xfdd4c4
+Memory Frame freed, Address = 0xfdd9a0
+Memory Frame freed, Address = 0xfdde7c
+Memory Frame freed, Address = 0xfde358
+Memory Frame freed, Address = 0xfde834
+Memory Frame freed, Address = 0xfded10
+Memory Frame freed, Address = 0xfdf1ec
+Memory Frame freed, Address = 0xfdf6c8
+Memory Frame freed, Address = 0xfdfba4
+Memory Frame freed, Address = 0xfe0080
+Memory Frame freed, Address = 0xfe055c
+Memory Frame freed, Address = 0xfe0a38
+Memory Frame freed, Address = 0xfe0f14
+Memory Frame freed, Address = 0xfe13f0
+Memory Frame freed, Address = 0xfe18cc
+Memory Frame freed, Address = 0xfe1da8
+Memory Frame freed, Address = 0xfe2284
+Memory Frame freed, Address = 0xfe2760
+Memory Frame freed, Address = 0xfe2c3c
+Memory Frame freed, Address = 0xfe3118
+Memory Frame freed, Address = 0xfe35f4
+Memory Frame freed, Address = 0xfe3ad0
+Memory Frame freed, Address = 0xfe3fac
+Memory Frame freed, Address = 0xfe4488
+Memory Frame freed, Address = 0xfe4964
+Memory Frame freed, Address = 0xfe4e40
+Memory Frame freed, Address = 0xfe531c
+Memory Frame freed, Address = 0xfe57f8
+Memory Frame freed, Address = 0xfe5cd4
+Memory Frame freed, Address = 0xfe61b0
+Memory Frame freed, Address = 0xfe668c
+Memory Frame freed, Address = 0xfe6b68
+Memory Frame freed, Address = 0xfe7044
+Memory Frame freed, Address = 0xfe7520
+Memory Frame freed, Address = 0xfe79fc
+Memory Frame freed, Address = 0xfe7ed8
+Memory Frame freed, Address = 0xfe83b4
+Memory Frame freed, Address = 0xfe8890
+Memory Frame freed, Address = 0xfe8d6c
+Memory Frame freed, Address = 0xfe9248
+Memory Frame freed, Address = 0xfe9724
+Memory Frame freed, Address = 0xfe9c00
+
+[ Memory mapped Virtual/Physical Page Table ]
+
+-----------------------------------------------------------------------------------
+|    Process    |    PageNumber    |    VirtualAddress    |    PhysicalAddress    |
+-----------------------------------------------------------------------------------
+|       P2      |        255         |     0x1236aa22       |        0xf9c4dc      |
+|       P2      |        256         |     0x1236ac78       |        0xf9c9b8      |
+|       P2      |        257         |     0x1236aece       |        0xf9ce94      |
+|       P2      |        258         |     0x1236b124       |        0xf9d370      |
+|       P2      |        259         |     0x1236b37a       |        0xf9d84c      |
+|       P2      |        260         |     0x1236b5d0       |        0xf9dd28      |
+|       P2      |        261         |     0x1236b826       |        0xf9e204      |
+|       P2      |        262         |     0x1236ba7c       |        0xf9e6e0      |
+|       P2      |        263         |     0x1236bcd2       |        0xf9ebbc      |
+|       P2      |        264         |     0x1236bf28       |        0xf9f098      |
+|       P2      |        265         |     0x1236c17e       |        0xf9f574      |
+|       P2      |        266         |     0x1236c3d4       |        0xf9fa50      |
+|       P2      |        267         |     0x1236c62a       |        0xf9ff2c      |
+|       P2      |        268         |     0x1236c880       |        0xfa0408      |
+|       P2      |        269         |     0x1236cad6       |        0xfa08e4      |
+|       P2      |        270         |     0x1236cd2c       |        0xfa0dc0      |
+|       P2      |        271         |     0x1236cf82       |        0xfa129c      |
+|       P2      |        272         |     0x1236d1d8       |        0xfa1778      |
+|       P2      |        273         |     0x1236d42e       |        0xfa1c54      |
+|       P2      |        274         |     0x1236d684       |        0xfa2130      |
+|       P2      |        275         |     0x1236d8da       |        0xfa260c      |
+|       P2      |        276         |     0x1236db30       |        0xfa2ae8      |
+|       P2      |        277         |     0x1236dd86       |        0xfa2fc4      |
+|       P2      |        278         |     0x1236dfdc       |        0xfa34a0      |
+|       P2      |        279         |     0x1236e232       |        0xfa397c      |
+|       P2      |        280         |     0x1236e488       |        0xfa3e58      |
+|       P2      |        281         |     0x1236e6de       |        0xfa4334      |
+|       P2      |        282         |     0x1236e934       |        0xfa4810      |
+|       P2      |        283         |     0x1236eb8a       |        0xfa4cec      |
+|       P2      |        284         |     0x1236ede0       |        0xfa51c8      |
+|       P2      |        285         |     0x1236f036       |        0xfa56a4      |
+|       P2      |        286         |     0x1236f28c       |        0xfa5b80      |
+|       P2      |        287         |     0x1236f4e2       |        0xfa605c      |
+|       P2      |        288         |     0x1236f738       |        0xfa6538      |
+|       P2      |        289         |     0x1236f98e       |        0xfa6a14      |
+|       P2      |        290         |     0x1236fbe4       |        0xfa6ef0      |
+|       P2      |        291         |     0x1236fe3a       |        0xfa73cc      |
+|       P2      |        292         |     0x12370090       |        0xfa78a8      |
+|       P2      |        293         |     0x123702e6       |        0xfa7d84      |
+|       P2      |        294         |     0x1237053c       |        0xfa8260      |
+|       P2      |        295         |     0x12370792       |        0xfa873c      |
+|       P2      |        296         |     0x123709e8       |        0xfa8c18      |
+|       P2      |        297         |     0x12370c3e       |        0xfa90f4      |
+|       P2      |        298         |     0x12370e94       |        0xfa95d0      |
+|       P2      |        299         |     0x123710ea       |        0xfa9aac      |
+|       P2      |        300         |     0x12371340       |        0xfa9f88      |
+|       P2      |        301         |     0x12371596       |        0xfaa464      |
+|       P2      |        302         |     0x123717ec       |        0xfaa940      |
+|       P2      |        303         |     0x12371a42       |        0xfaae1c      |
+|       P2      |        304         |     0x12371c98       |        0xfab2f8      |
+|       P2      |        305         |     0x12371eee       |        0xfab7d4      |
+|       P2      |        306         |     0x12372144       |        0xfabcb0      |
+|       P2      |        307         |     0x1237239a       |        0xfac18c      |
+|       P2      |        308         |     0x123725f0       |        0xfac668      |
+|       P2      |        309         |     0x12372846       |        0xfacb44      |
+|       P2      |        310         |     0x12372a9c       |        0xfad020      |
+|       P2      |        311         |     0x12372cf2       |        0xfad4fc      |
+|       P2      |        312         |     0x12372f48       |        0xfad9d8      |
+|       P2      |        313         |     0x1237319e       |        0xfadeb4      |
+|       P2      |        314         |     0x123733f4       |        0xfae390      |
+|       P2      |        315         |     0x1237364a       |        0xfae86c      |
+|       P2      |        316         |     0x123738a0       |        0xfaed48      |
+|       P2      |        317         |     0x12373af6       |        0xfaf224      |
+|       P2      |        318         |     0x12373d4c       |        0xfaf700      |
+|       P2      |        319         |     0x12373fa2       |        0xfafbdc      |
+|       P2      |        320         |     0x123741f8       |        0xfb00b8      |
+|       P2      |        321         |     0x1237444e       |        0xfb0594      |
+|       P2      |        322         |     0x123746a4       |        0xfb0a70      |
+|       P2      |        323         |     0x123748fa       |        0xfb0f4c      |
+|       P2      |        324         |     0x12374b50       |        0xfb1428      |
+|       P2      |        325         |     0x12374da6       |        0xfb1904      |
+|       P2      |        326         |     0x12374ffc       |        0xfb1de0      |
+|       P2      |        327         |     0x12375252       |        0xfb22bc      |
+|       P2      |        328         |     0x123754a8       |        0xfb2798      |
+|       P2      |        329         |     0x123756fe       |        0xfb2c74      |
+|       P2      |        330         |     0x12375954       |        0xfb3150      |
+|       P2      |        331         |     0x12375baa       |        0xfb362c      |
+|       P3      |        331         |     0x12375baa       |        0xfb3b08      |
+|       P3      |        332         |     0x12375e00       |        0xfb3fe4      |
+|       P3      |        333         |     0x12376056       |        0xfb44c0      |
+|       P3      |        334         |     0x123762ac       |        0xfb499c      |
+|       P3      |        335         |     0x12376502       |        0xfb4e78      |
+|       P3      |        336         |     0x12376758       |        0xfb5354      |
+|       P3      |        337         |     0x123769ae       |        0xfb5830      |
+|       P3      |        338         |     0x12376c04       |        0xfb5d0c      |
+|       P3      |        339         |     0x12376e5a       |        0xfb61e8      |
+|       P3      |        340         |     0x123770b0       |        0xfb66c4      |
+|       P3      |        341         |     0x12377306       |        0xfb6ba0      |
+|       P3      |        342         |     0x1237755c       |        0xfb707c      |
+|       P3      |        343         |     0x123777b2       |        0xfb7558      |
+|       P3      |        344         |     0x12377a08       |        0xfb7a34      |
+|       P3      |        345         |     0x12377c5e       |        0xfb7f10      |
+|       P3      |        346         |     0x12377eb4       |        0xfb83ec      |
+|       P3      |        347         |     0x1237810a       |        0xfb88c8      |
+|       P3      |        348         |     0x12378360       |        0xfb8da4      |
+|       P3      |        349         |     0x123785b6       |        0xfb9280      |
+|       P3      |        350         |     0x1237880c       |        0xfb975c      |
+|       P3      |        351         |     0x12378a62       |        0xfb9c38      |
+|       P3      |        352         |     0x12378cb8       |        0xfba114      |
+|       P3      |        353         |     0x12378f0e       |        0xfba5f0      |
+|       P3      |        354         |     0x12379164       |        0xfbaacc      |
+|       P3      |        355         |     0x123793ba       |        0xfbafa8      |
+|       P3      |        356         |     0x12379610       |        0xfbb484      |
+|       P3      |        357         |     0x12379866       |        0xfbb960      |
+|       P3      |        358         |     0x12379abc       |        0xfbbe3c      |
+|       P3      |        359         |     0x12379d12       |        0xfbc318      |
+|       P3      |        360         |     0x12379f68       |        0xfbc7f4      |
+|       P3      |        361         |     0x1237a1be       |        0xfbccd0      |
+|       P3      |        362         |     0x1237a414       |        0xfbd1ac      |
+|       P3      |        363         |     0x1237a66a       |        0xfbd688      |
+|       P3      |        364         |     0x1237a8c0       |        0xfbdb64      |
+|       P3      |        365         |     0x1237ab16       |        0xfbe040      |
+|       P3      |        366         |     0x1237ad6c       |        0xfbe51c      |
+|       P3      |        367         |     0x1237afc2       |        0xfbe9f8      |
+|       P3      |        368         |     0x1237b218       |        0xfbeed4      |
+|       P3      |        369         |     0x1237b46e       |        0xfbf3b0      |
+|       P3      |        370         |     0x1237b6c4       |        0xfbf88c      |
+|       P3      |        371         |     0x1237b91a       |        0xfbfd68      |
+|       P3      |        372         |     0x1237bb70       |        0xfc0244      |
+|       P3      |        373         |     0x1237bdc6       |        0xfc0720      |
+|       P3      |        374         |     0x1237c01c       |        0xfc0bfc      |
+|       P3      |        375         |     0x1237c272       |        0xfc10d8      |
+|       P3      |        376         |     0x1237c4c8       |        0xfc15b4      |
+|       P3      |        377         |     0x1237c71e       |        0xfc1a90      |
+|       P3      |        378         |     0x1237c974       |        0xfc1f6c      |
+|       P3      |        379         |     0x1237cbca       |        0xfc2448      |
+|       P3      |        380         |     0x1237ce20       |        0xfc2924      |
+|       P3      |        381         |     0x1237d076       |        0xfc2e00      |
+|       P3      |        382         |     0x1237d2cc       |        0xfc32dc      |
+|       P3      |        383         |     0x1237d522       |        0xfc37b8      |
+|       P3      |        384         |     0x1237d778       |        0xfc3c94      |
+|       P3      |        385         |     0x1237d9ce       |        0xfc4170      |
+|       P3      |        386         |     0x1237dc24       |        0xfc464c      |
+|       P3      |        387         |     0x1237de7a       |        0xfc4b28      |
+|       P3      |        388         |     0x1237e0d0       |        0xfc5004      |
+|       P3      |        389         |     0x1237e326       |        0xfc54e0      |
+|       P3      |        390         |     0x1237e57c       |        0xfc59bc      |
+|       P3      |        391         |     0x1237e7d2       |        0xfc5e98      |
+|       P3      |        392         |     0x1237ea28       |        0xfc6374      |
+|       P3      |        393         |     0x1237ec7e       |        0xfc6850      |
+|       P3      |        394         |     0x1237eed4       |        0xfc6d2c      |
+|       P3      |        395         |     0x1237f12a       |        0xfc7208      |
+|       P3      |        396         |     0x1237f380       |        0xfc76e4      |
+|       P3      |        397         |     0x1237f5d6       |        0xfc7bc0      |
+|       P3      |        398         |     0x1237f82c       |        0xfc809c      |
+|       P3      |        399         |     0x1237fa82       |        0xfc8578      |
+|       P3      |        400         |     0x1237fcd8       |        0xfc8a54      |
+|       P3      |        401         |     0x1237ff2e       |        0xfc8f30      |
+|       P3      |        402         |     0x12380184       |        0xfc940c      |
+|       P3      |        403         |     0x123803da       |        0xfc98e8      |
+|       P3      |        404         |     0x12380630       |        0xfc9dc4      |
+|       P3      |        405         |     0x12380886       |        0xfca2a0      |
+|       P3      |        406         |     0x12380adc       |        0xfca77c      |
+|       P3      |        407         |     0x12380d32       |        0xfcac58      |
+|       P3      |        408         |     0x12380f88       |        0xfcb134      |
+|       P3      |        409         |     0x123811de       |        0xfcb610      |
+|       P3      |        410         |     0x12381434       |        0xfcbaec      |
+|       P3      |        411         |     0x1238168a       |        0xfcbfc8      |
+|       P3      |        412         |     0x123818e0       |        0xfcc4a4      |
+|       P3      |        413         |     0x12381b36       |        0xfcc980      |
+|       P3      |        414         |     0x12381d8c       |        0xfcce5c      |
+|       P3      |        415         |     0x12381fe2       |        0xfcd338      |
+|       P3      |        416         |     0x12382238       |        0xfcd814      |
+|       P3      |        417         |     0x1238248e       |        0xfcdcf0      |
+|       P3      |        418         |     0x123826e4       |        0xfce1cc      |
+|       P3      |        419         |     0x1238293a       |        0xfce6a8      |
+|       P3      |        420         |     0x12382b90       |        0xfceb84      |
+|       P3      |        421         |     0x12382de6       |        0xfcf060      |
+|       P3      |        422         |     0x1238303c       |        0xfcf53c      |
+|       P3      |        423         |     0x12383292       |        0xfcfa18      |
+|       P3      |        424         |     0x123834e8       |        0xfcfef4      |
+|       P3      |        425         |     0x1238373e       |        0xfd03d0      |
+|       P3      |        426         |     0x12383994       |        0xfd08ac      |
+|       P3      |        427         |     0x12383bea       |        0xfd0d88      |
+|       P3      |        428         |     0x12383e40       |        0xfd1264      |
+|       P4      |        428         |     0x12383e40       |        0xfd1740      |
+|       P4      |        429         |     0x12384096       |        0xfd1c1c      |
+|       P4      |        430         |     0x123842ec       |        0xfd20f8      |
+|       P4      |        431         |     0x12384542       |        0xfd25d4      |
+|       P4      |        432         |     0x12384798       |        0xfd2ab0      |
+|       P4      |        433         |     0x123849ee       |        0xfd2f8c      |
+|       P4      |        434         |     0x12384c44       |        0xfd3468      |
+|       P4      |        435         |     0x12384e9a       |        0xfd3944      |
+|       P4      |        436         |     0x123850f0       |        0xfd3e20      |
+|       P4      |        437         |     0x12385346       |        0xfd42fc      |
+|       P4      |        438         |     0x1238559c       |        0xfd47d8      |
+|       P4      |        439         |     0x123857f2       |        0xfd4cb4      |
+|       P4      |        440         |     0x12385a48       |        0xfd5190      |
+|       P4      |        441         |     0x12385c9e       |        0xfd566c      |
+|       P4      |        442         |     0x12385ef4       |        0xfd5b48      |
+|       P4      |        443         |     0x1238614a       |        0xfd6024      |
+|       P4      |        444         |     0x123863a0       |        0xfd6500      |
+|       P4      |        445         |     0x123865f6       |        0xfd69dc      |
+|       P4      |        446         |     0x1238684c       |        0xfd6eb8      |
+|       P4      |        447         |     0x12386aa2       |        0xfd7394      |
+|       P4      |        448         |     0x12386cf8       |        0xfd7870      |
+|       P4      |        449         |     0x12386f4e       |        0xfd7d4c      |
+|       P4      |        450         |     0x123871a4       |        0xfd8228      |
+|       P4      |        451         |     0x123873fa       |        0xfd8704      |
+|       P4      |        452         |     0x12387650       |        0xfd8be0      |
+|       P4      |        453         |     0x123878a6       |        0xfd90bc      |
+|       P4      |        454         |     0x12387afc       |        0xfd9598      |
+|       P4      |        455         |     0x12387d52       |        0xfd9a74      |
+|       P4      |        456         |     0x12387fa8       |        0xfd9f50      |
+|       P4      |        457         |     0x123881fe       |        0xfda42c      |
+|       P4      |        458         |     0x12388454       |        0xfda908      |
+|       P4      |        459         |     0x123886aa       |        0xfdade4      |
+|       P4      |        460         |     0x12388900       |        0xfdb2c0      |
+|       P4      |        461         |     0x12388b56       |        0xfdb79c      |
+|       P4      |        462         |     0x12388dac       |        0xfdbc78      |
+|       P4      |        463         |     0x12389002       |        0xfdc154      |
+|       P4      |        464         |     0x12389258       |        0xfdc630      |
+|       P4      |        465         |     0x123894ae       |        0xfdcb0c      |
+|       P4      |        466         |     0x12389704       |        0xfdcfe8      |
+|       P4      |        467         |     0x1238995a       |        0xfdd4c4      |
+|       P4      |        468         |     0x12389bb0       |        0xfdd9a0      |
+|       P4      |        469         |     0x12389e06       |        0xfdde7c      |
+|       P4      |        470         |     0x1238a05c       |        0xfde358      |
+|       P4      |        471         |     0x1238a2b2       |        0xfde834      |
+|       P4      |        472         |     0x1238a508       |        0xfded10      |
+|       P4      |        473         |     0x1238a75e       |        0xfdf1ec      |
+|       P4      |        474         |     0x1238a9b4       |        0xfdf6c8      |
+|       P4      |        475         |     0x1238ac0a       |        0xfdfba4      |
+|       P4      |        476         |     0x1238ae60       |        0xfe0080      |
+|       P4      |        477         |     0x1238b0b6       |        0xfe055c      |
+|       P4      |        478         |     0x1238b30c       |        0xfe0a38      |
+|       P4      |        479         |     0x1238b562       |        0xfe0f14      |
+|       P4      |        480         |     0x1238b7b8       |        0xfe13f0      |
+|       P4      |        481         |     0x1238ba0e       |        0xfe18cc      |
+|       P4      |        482         |     0x1238bc64       |        0xfe1da8      |
+|       P4      |        483         |     0x1238beba       |        0xfe2284      |
+|       P4      |        484         |     0x1238c110       |        0xfe2760      |
+|       P4      |        485         |     0x1238c366       |        0xfe2c3c      |
+|       P4      |        486         |     0x1238c5bc       |        0xfe3118      |
+|       P4      |        487         |     0x1238c812       |        0xfe35f4      |
+|       P4      |        488         |     0x1238ca68       |        0xfe3ad0      |
+|       P4      |        489         |     0x1238ccbe       |        0xfe3fac      |
+|       P4      |        490         |     0x1238cf14       |        0xfe4488      |
+|       P4      |        491         |     0x1238d16a       |        0xfe4964      |
+|       P4      |        492         |     0x1238d3c0       |        0xfe4e40      |
+|       P4      |        493         |     0x1238d616       |        0xfe531c      |
+|       P4      |        494         |     0x1238d86c       |        0xfe57f8      |
+|       P4      |        495         |     0x1238dac2       |        0xfe5cd4      |
+|       P4      |        496         |     0x1238dd18       |        0xfe61b0      |
+|       P4      |        497         |     0x1238df6e       |        0xfe668c      |
+|       P4      |        498         |     0x1238e1c4       |        0xfe6b68      |
+|       P4      |        499         |     0x1238e41a       |        0xfe7044      |
+|       P4      |        500         |     0x1238e670       |        0xfe7520      |
+|       P4      |        501         |     0x1238e8c6       |        0xfe79fc      |
+|       P4      |        502         |     0x1238eb1c       |        0xfe7ed8      |
+|       P4      |        503         |     0x1238ed72       |        0xfe83b4      |
+|       P4      |        504         |     0x1238efc8       |        0xfe8890      |
+|       P4      |        505         |     0x1238f21e       |        0xfe8d6c      |
+|       P4      |        506         |     0x1238f474       |        0xfe9248      |
+|       P4      |        507         |     0x1238f6ca       |        0xfe9724      |
+|       P4      |        508         |     0x1238f920       |        0xfe9c00      |
+***- 1MB block of pages loaded -***
+-----------------------------------------------------------------------------------
+Memory Frame freed, Address = 0xf9c4dc
+Memory Frame freed, Address = 0xf9c9b8
+Memory Frame freed, Address = 0xf9ce94
+Memory Frame freed, Address = 0xf9d370
+Memory Frame freed, Address = 0xf9d84c
+Memory Frame freed, Address = 0xf9dd28
+Memory Frame freed, Address = 0xf9e204
+Memory Frame freed, Address = 0xf9e6e0
+Memory Frame freed, Address = 0xf9ebbc
+Memory Frame freed, Address = 0xf9f098
+Memory Frame freed, Address = 0xf9f574
+Memory Frame freed, Address = 0xf9fa50
+Memory Frame freed, Address = 0xf9ff2c
+Memory Frame freed, Address = 0xfa0408
+Memory Frame freed, Address = 0xfa08e4
+Memory Frame freed, Address = 0xfa0dc0
+Memory Frame freed, Address = 0xfa129c
+Memory Frame freed, Address = 0xfa1778
+Memory Frame freed, Address = 0xfa1c54
+Memory Frame freed, Address = 0xfa2130
+Memory Frame freed, Address = 0xfa260c
+Memory Frame freed, Address = 0xfa2ae8
+Memory Frame freed, Address = 0xfa2fc4
+Memory Frame freed, Address = 0xfa34a0
+Memory Frame freed, Address = 0xfa397c
+Memory Frame freed, Address = 0xfa3e58
+Memory Frame freed, Address = 0xfa4334
+Memory Frame freed, Address = 0xfa4810
+Memory Frame freed, Address = 0xfa4cec
+Memory Frame freed, Address = 0xfa51c8
+Memory Frame freed, Address = 0xfa56a4
+Memory Frame freed, Address = 0xfa5b80
+Memory Frame freed, Address = 0xfa605c
+Memory Frame freed, Address = 0xfa6538
+Memory Frame freed, Address = 0xfa6a14
+Memory Frame freed, Address = 0xfa6ef0
+Memory Frame freed, Address = 0xfa73cc
+Memory Frame freed, Address = 0xfa78a8
+Memory Frame freed, Address = 0xfa7d84
+Memory Frame freed, Address = 0xfa8260
+Memory Frame freed, Address = 0xfa873c
+Memory Frame freed, Address = 0xfa8c18
+Memory Frame freed, Address = 0xfa90f4
+Memory Frame freed, Address = 0xfa95d0
+Memory Frame freed, Address = 0xfa9aac
+Memory Frame freed, Address = 0xfa9f88
+Memory Frame freed, Address = 0xfaa464
+Memory Frame freed, Address = 0xfaa940
+Memory Frame freed, Address = 0xfaae1c
+Memory Frame freed, Address = 0xfab2f8
+Memory Frame freed, Address = 0xfab7d4
+Memory Frame freed, Address = 0xfabcb0
+Memory Frame freed, Address = 0xfac18c
+Memory Frame freed, Address = 0xfac668
+Memory Frame freed, Address = 0xfacb44
+Memory Frame freed, Address = 0xfad020
+Memory Frame freed, Address = 0xfad4fc
+Memory Frame freed, Address = 0xfad9d8
+Memory Frame freed, Address = 0xfadeb4
+Memory Frame freed, Address = 0xfae390
+Memory Frame freed, Address = 0xfae86c
+Memory Frame freed, Address = 0xfaed48
+Memory Frame freed, Address = 0xfaf224
+Memory Frame freed, Address = 0xfaf700
+Memory Frame freed, Address = 0xfafbdc
+Memory Frame freed, Address = 0xfb00b8
+Memory Frame freed, Address = 0xfb0594
+Memory Frame freed, Address = 0xfb0a70
+Memory Frame freed, Address = 0xfb0f4c
+Memory Frame freed, Address = 0xfb1428
+Memory Frame freed, Address = 0xfb1904
+Memory Frame freed, Address = 0xfb1de0
+Memory Frame freed, Address = 0xfb22bc
+Memory Frame freed, Address = 0xfb2798
+Memory Frame freed, Address = 0xfb2c74
+Memory Frame freed, Address = 0xfb3150
+Memory Frame freed, Address = 0xfb362c
+Memory Frame freed, Address = 0xfb3b08
+Memory Frame freed, Address = 0xfb3fe4
+Memory Frame freed, Address = 0xfb44c0
+Memory Frame freed, Address = 0xfb499c
+Memory Frame freed, Address = 0xfb4e78
+Memory Frame freed, Address = 0xfb5354
+Memory Frame freed, Address = 0xfb5830
+Memory Frame freed, Address = 0xfb5d0c
+Memory Frame freed, Address = 0xfb61e8
+Memory Frame freed, Address = 0xfb66c4
+Memory Frame freed, Address = 0xfb6ba0
+Memory Frame freed, Address = 0xfb707c
+Memory Frame freed, Address = 0xfb7558
+Memory Frame freed, Address = 0xfb7a34
+Memory Frame freed, Address = 0xfb7f10
+Memory Frame freed, Address = 0xfb83ec
+Memory Frame freed, Address = 0xfb88c8
+Memory Frame freed, Address = 0xfb8da4
+Memory Frame freed, Address = 0xfb9280
+Memory Frame freed, Address = 0xfb975c
+Memory Frame freed, Address = 0xfb9c38
+Memory Frame freed, Address = 0xfba114
+Memory Frame freed, Address = 0xfba5f0
+Memory Frame freed, Address = 0xfbaacc
+Memory Frame freed, Address = 0xfbafa8
+Memory Frame freed, Address = 0xfbb484
+Memory Frame freed, Address = 0xfbb960
+Memory Frame freed, Address = 0xfbbe3c
+Memory Frame freed, Address = 0xfbc318
+Memory Frame freed, Address = 0xfbc7f4
+Memory Frame freed, Address = 0xfbccd0
+Memory Frame freed, Address = 0xfbd1ac
+Memory Frame freed, Address = 0xfbd688
+Memory Frame freed, Address = 0xfbdb64
+Memory Frame freed, Address = 0xfbe040
+Memory Frame freed, Address = 0xfbe51c
+Memory Frame freed, Address = 0xfbe9f8
+Memory Frame freed, Address = 0xfbeed4
+Memory Frame freed, Address = 0xfbf3b0
+Memory Frame freed, Address = 0xfbf88c
+Memory Frame freed, Address = 0xfbfd68
+Memory Frame freed, Address = 0xfc0244
+Memory Frame freed, Address = 0xfc0720
+Memory Frame freed, Address = 0xfc0bfc
+Memory Frame freed, Address = 0xfc10d8
+Memory Frame freed, Address = 0xfc15b4
+Memory Frame freed, Address = 0xfc1a90
+Memory Frame freed, Address = 0xfc1f6c
+Memory Frame freed, Address = 0xfc2448
+Memory Frame freed, Address = 0xfc2924
+Memory Frame freed, Address = 0xfc2e00
+Memory Frame freed, Address = 0xfc32dc
+Memory Frame freed, Address = 0xfc37b8
+Memory Frame freed, Address = 0xfc3c94
+Memory Frame freed, Address = 0xfc4170
+Memory Frame freed, Address = 0xfc464c
+Memory Frame freed, Address = 0xfc4b28
+Memory Frame freed, Address = 0xfc5004
+Memory Frame freed, Address = 0xfc54e0
+Memory Frame freed, Address = 0xfc59bc
+Memory Frame freed, Address = 0xfc5e98
+Memory Frame freed, Address = 0xfc6374
+Memory Frame freed, Address = 0xfc6850
+Memory Frame freed, Address = 0xfc6d2c
+Memory Frame freed, Address = 0xfc7208
+Memory Frame freed, Address = 0xfc76e4
+Memory Frame freed, Address = 0xfc7bc0
+Memory Frame freed, Address = 0xfc809c
+Memory Frame freed, Address = 0xfc8578
+Memory Frame freed, Address = 0xfc8a54
+Memory Frame freed, Address = 0xfc8f30
+Memory Frame freed, Address = 0xfc940c
+Memory Frame freed, Address = 0xfc98e8
+Memory Frame freed, Address = 0xfc9dc4
+Memory Frame freed, Address = 0xfca2a0
+Memory Frame freed, Address = 0xfca77c
+Memory Frame freed, Address = 0xfcac58
+Memory Frame freed, Address = 0xfcb134
+Memory Frame freed, Address = 0xfcb610
+Memory Frame freed, Address = 0xfcbaec
+Memory Frame freed, Address = 0xfcbfc8
+Memory Frame freed, Address = 0xfcc4a4
+Memory Frame freed, Address = 0xfcc980
+Memory Frame freed, Address = 0xfcce5c
+Memory Frame freed, Address = 0xfcd338
+Memory Frame freed, Address = 0xfcd814
+Memory Frame freed, Address = 0xfcdcf0
+Memory Frame freed, Address = 0xfce1cc
+Memory Frame freed, Address = 0xfce6a8
+Memory Frame freed, Address = 0xfceb84
+Memory Frame freed, Address = 0xfcf060
+Memory Frame freed, Address = 0xfcf53c
+Memory Frame freed, Address = 0xfcfa18
+Memory Frame freed, Address = 0xfcfef4
+Memory Frame freed, Address = 0xfd03d0
+Memory Frame freed, Address = 0xfd08ac
+Memory Frame freed, Address = 0xfd0d88
+Memory Frame freed, Address = 0xfd1264
+Memory Frame freed, Address = 0xfd1740
+Memory Frame freed, Address = 0xfd1c1c
+Memory Frame freed, Address = 0xfd20f8
+Memory Frame freed, Address = 0xfd25d4
+Memory Frame freed, Address = 0xfd2ab0
+Memory Frame freed, Address = 0xfd2f8c
+Memory Frame freed, Address = 0xfd3468
+Memory Frame freed, Address = 0xfd3944
+Memory Frame freed, Address = 0xfd3e20
+Memory Frame freed, Address = 0xfd42fc
+Memory Frame freed, Address = 0xfd47d8
+Memory Frame freed, Address = 0xfd4cb4
+Memory Frame freed, Address = 0xfd5190
+Memory Frame freed, Address = 0xfd566c
+Memory Frame freed, Address = 0xfd5b48
+Memory Frame freed, Address = 0xfd6024
+Memory Frame freed, Address = 0xfd6500
+Memory Frame freed, Address = 0xfd69dc
+Memory Frame freed, Address = 0xfd6eb8
+Memory Frame freed, Address = 0xfd7394
+Memory Frame freed, Address = 0xfd7870
+Memory Frame freed, Address = 0xfd7d4c
+Memory Frame freed, Address = 0xfd8228
+Memory Frame freed, Address = 0xfd8704
+Memory Frame freed, Address = 0xfd8be0
+Memory Frame freed, Address = 0xfd90bc
+Memory Frame freed, Address = 0xfd9598
+Memory Frame freed, Address = 0xfd9a74
+Memory Frame freed, Address = 0xfd9f50
+Memory Frame freed, Address = 0xfda42c
+Memory Frame freed, Address = 0xfda908
+Memory Frame freed, Address = 0xfdade4
+Memory Frame freed, Address = 0xfdb2c0
+Memory Frame freed, Address = 0xfdb79c
+Memory Frame freed, Address = 0xfdbc78
+Memory Frame freed, Address = 0xfdc154
+Memory Frame freed, Address = 0xfdc630
+Memory Frame freed, Address = 0xfdcb0c
+Memory Frame freed, Address = 0xfdcfe8
+Memory Frame freed, Address = 0xfdd4c4
+Memory Frame freed, Address = 0xfdd9a0
+Memory Frame freed, Address = 0xfdde7c
+Memory Frame freed, Address = 0xfde358
+Memory Frame freed, Address = 0xfde834
+Memory Frame freed, Address = 0xfded10
+Memory Frame freed, Address = 0xfdf1ec
+Memory Frame freed, Address = 0xfdf6c8
+Memory Frame freed, Address = 0xfdfba4
+Memory Frame freed, Address = 0xfe0080
+Memory Frame freed, Address = 0xfe055c
+Memory Frame freed, Address = 0xfe0a38
+Memory Frame freed, Address = 0xfe0f14
+Memory Frame freed, Address = 0xfe13f0
+Memory Frame freed, Address = 0xfe18cc
+Memory Frame freed, Address = 0xfe1da8
+Memory Frame freed, Address = 0xfe2284
+Memory Frame freed, Address = 0xfe2760
+Memory Frame freed, Address = 0xfe2c3c
+Memory Frame freed, Address = 0xfe3118
+Memory Frame freed, Address = 0xfe35f4
+Memory Frame freed, Address = 0xfe3ad0
+Memory Frame freed, Address = 0xfe3fac
+Memory Frame freed, Address = 0xfe4488
+Memory Frame freed, Address = 0xfe4964
+Memory Frame freed, Address = 0xfe4e40
+Memory Frame freed, Address = 0xfe531c
+Memory Frame freed, Address = 0xfe57f8
+Memory Frame freed, Address = 0xfe5cd4
+Memory Frame freed, Address = 0xfe61b0
+Memory Frame freed, Address = 0xfe668c
+Memory Frame freed, Address = 0xfe6b68
+Memory Frame freed, Address = 0xfe7044
+Memory Frame freed, Address = 0xfe7520
+Memory Frame freed, Address = 0xfe79fc
+Memory Frame freed, Address = 0xfe7ed8
+Memory Frame freed, Address = 0xfe83b4
+Memory Frame freed, Address = 0xfe8890
+Memory Frame freed, Address = 0xfe8d6c
+Memory Frame freed, Address = 0xfe9248
+Memory Frame freed, Address = 0xfe9724
+Memory Frame freed, Address = 0xfe9c00
+
+[ Memory mapped Virtual/Physical Page Table ]
+
+-----------------------------------------------------------------------------------
+|    Process    |    PageNumber    |    VirtualAddress    |    PhysicalAddress    |
+-----------------------------------------------------------------------------------
+|       P4      |        509         |     0x1238fb76       |        0xf9c4dc      |
+|       P4      |        510         |     0x1238fdcc       |        0xf9c9b8      |
+|       P4      |        511         |     0x12390022       |        0xf9ce94      |
+|       P4      |        512         |     0x12390278       |        0xf9d370      |
+|       P4      |        513         |     0x123904ce       |        0xf9d84c      |
+|       P4      |        514         |     0x12390724       |        0xf9dd28      |
+|       P4      |        515         |     0x1239097a       |        0xf9e204      |
+|       P4      |        516         |     0x12390bd0       |        0xf9e6e0      |
+|       P4      |        517         |     0x12390e26       |        0xf9ebbc      |
+|       P4      |        518         |     0x1239107c       |        0xf9f098      |
+|       P4      |        519         |     0x123912d2       |        0xf9f574      |
+|       P4      |        520         |     0x12391528       |        0xf9fa50      |
+|       P4      |        521         |     0x1239177e       |        0xf9ff2c      |
+|       P4      |        522         |     0x123919d4       |        0xfa0408      |
+|       P4      |        523         |     0x12391c2a       |        0xfa08e4      |
+|       P4      |        524         |     0x12391e80       |        0xfa0dc0      |
+|       P4      |        525         |     0x123920d6       |        0xfa129c      |
+Memory Frame freed, Address = 0xf9c4dc
+Memory Frame freed, Address = 0xf9c9b8
+Memory Frame freed, Address = 0xf9ce94
+Memory Frame freed, Address = 0xf9d370
+Memory Frame freed, Address = 0xf9d84c
+Memory Frame freed, Address = 0xf9dd28
+Memory Frame freed, Address = 0xf9e204
+Memory Frame freed, Address = 0xf9e6e0
+Memory Frame freed, Address = 0xf9ebbc
+Memory Frame freed, Address = 0xf9f098
+Memory Frame freed, Address = 0xf9f574
+Memory Frame freed, Address = 0xf9fa50
+Memory Frame freed, Address = 0xf9ff2c
+Memory Frame freed, Address = 0xfa0408
+Memory Frame freed, Address = 0xfa08e4
+Memory Frame freed, Address = 0xfa0dc0
+Memory Frame freed, Address = 0xfa129c

@@ -1,0 +1,13 @@
+#this file contains process information anf their memory needed
+#comments can be given by # sign
+
+#Process    Memory-required(bytes)
+   1            960000
+   2            400000
+   3            400000
+   4            400000
+
+#Proceso 1: Grid de tron
+#Proceso 2: Jugador 1
+#Proceso 3: Jugador 2
+#Proceso 4: Bola de Brick Breacker
