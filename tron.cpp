@@ -41,8 +41,12 @@ int main( int argc, char* args[] )
   bool isRunning = true;
   
   //int grid[600][400];
-  printf("Antes del grid\n");
-  int **grid = RickMalloc(600, 400);
+  _SBLOCK *s_blockHead = NULL;
+  _VIRTMEMPAGEBLOCKS *virtmempageBlocks = NULL;
+  _MEMPAGEBLOCKS *mempageBlocks = NULL;
+  
+  int **grid = RickMalloc(s_blockHead, virtmempageBlocks, mempageBlocks, "files/process_1.txt", 600, 400);
+  //int **grid = RickMalloc(600, 400);
   
   for (int k = 0; k < 600; k++) {
 	for (int l = 0; l < 400; l++) {

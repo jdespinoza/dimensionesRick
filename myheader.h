@@ -128,10 +128,10 @@ extern void getFreeMemoryAddress(_MEMSEGMENTBLOCKS *,unsigned int ,void **);
 extern void allocateMemory_using_Segment_remain(_PROCINTNODE **,_MEMSEGMENTBLOCKS **);
 extern void AllocateALLMemory(_SBLOCK *, const char *);
 extern void AllocateFCFS(_SBLOCK *, const char *);
-extern void AllocatePAGING(_SBLOCK *, _VIRTMEMPAGEBLOCKS *, _MEMPAGEBLOCKS *, const char *);
+extern int **RickMalloc(_SBLOCK *, _VIRTMEMPAGEBLOCKS *, _MEMPAGEBLOCKS *, const char *, int, int);
 extern void AllocateSEGMENTATION(_SBLOCK *, _MEMSEGMENTBLOCKS *, const char *);
 extern int **myMalloc(int , int );
-extern int **RickMalloc(int , int );
+//extern int **RickMalloc(int , int );
 
 
 

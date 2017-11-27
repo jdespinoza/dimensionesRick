@@ -13,7 +13,7 @@ int main(int argc,char *argv[])
 
     inputFile = argv[optind];
 
-    AllocatePAGING(s_blockHead, virtmempageBlocks, mempageBlocks, inputFile);
+    //AllocatePAGING(s_blockHead, virtmempageBlocks, mempageBlocks, inputFile);
 
     return 0;
 }

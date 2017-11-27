@@ -108,7 +108,7 @@ void mapVirtPhyAddressPageTable(_VIRTMEMPAGEBLOCKS **virtmempageblockshead, _MEM
 
     while(currentmem != NULL){
             if(currentmem->isfree){
-                    printf("|       P%d      |        %d         |     %p       |        %p      |\n",
+					printf("|       P%d      |        %d         |     %p       |        %p      |\n",
                         currentvirt->process, currentvirt->pagenumber, currentvirt->memoryaddress, currentmem->memoryaddress);
                     
                     currentmem->isfree = false;
@@ -123,7 +123,7 @@ void mapVirtPhyAddressPageTable(_VIRTMEMPAGEBLOCKS **virtmempageblockshead, _MEM
                         count = 0;
                     }
             }
-
+			
             currentvirt = currentvirt->next;
             currentmem = currentmem->next;
 
@@ -174,22 +174,34 @@ int **myMalloc(int row, int col){
 	
 }
 
-
+/*
 int **RickMalloc(int row, int col)
 {
-	_INTNODE *dataList;
+	//_INTNODE *dataList;
 	_SBLOCK *s_blockHead = NULL;
     _VIRTMEMPAGEBLOCKS *virtmempageBlocks = NULL;
     _MEMPAGEBLOCKS *mempageBlocks = NULL;
+    //_NODE* head = NULL;
+    _INTNODE *inthead = NULL; 
     
-    int size = row * col;
-    while (size > 0) {
-		_intinsertAtEnd(0,&(dataList));
-		size--;
-	}
+    //int size = row + col;
+    //while (size > 0) {
+		//_intinsertAtEnd(0,&(dataList));
+		//head = _insertAtEnd('0',&head);
+		//size--;
+		
+	//}
+	
+	
+	_intinsertAtEnd(9,&inthead);
+    //head ya no se usa, asi que se elimina para liberar memoria
+    //_deleteCharList(&head);
+    
+    //free(head);
 	
 	_PROCINTNODE *procintHead = NULL;
-    procintHead = getDataFromINTNODEList(dataList, &procintHead);
+    procintHead = getDataFromINTNODEList(inthead, &procintHead);
+   
     divideProc_Mem_IntoPageBlocks(procintHead, &virtmempageBlocks, &mempageBlocks);
     
     printf("\n\n\t\t[ Allocate memory ]\n\n");
@@ -198,13 +210,13 @@ int **RickMalloc(int row, int col)
     
     return myMalloc(row, col);
 	
-}
+}*/
 
 /*
  * Inicio
  */
-void AllocatePAGING(_SBLOCK *s_blockHead,_VIRTMEMPAGEBLOCKS *virtmempageBlocks,
-                   _MEMPAGEBLOCKS *mempageBlocks, const char *inputFile)
+int **RickMalloc(_SBLOCK *s_blockHead,_VIRTMEMPAGEBLOCKS *virtmempageBlocks,
+                   _MEMPAGEBLOCKS *mempageBlocks, const char *inputFile, int row, int col)
 {
     //se obtiene los datos del archivo
     _INTNODE *dataList = getProcessData(inputFile);
@@ -218,4 +230,6 @@ void AllocatePAGING(_SBLOCK *s_blockHead,_VIRTMEMPAGEBLOCKS *virtmempageBlocks,
     printf("\n\n\t\t[ Allocate memory using Paging ]\n\n");
 
     mapVirtPhyAddressPageTable(&virtmempageBlocks, &mempageBlocks);
+    
+    return myMalloc(row, col);
 }

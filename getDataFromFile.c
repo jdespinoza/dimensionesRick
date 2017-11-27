@@ -117,11 +117,13 @@ _INTNODE *_deleteINTFront(_INTNODE **inthead)
  */
 void _separateNumbDatas(_NODE *head, _INTNODE **inthead)
 {
+	printf("P1\n");
     head = _insertAtEnd(' ',&head);
     _NODE*current = head;
     char holdStr[50];
     int index = 0;
-
+	
+	printf("P2\n");
     while(current != NULL){
         if(current->data == ' '){
                 holdStr[index] = '\0';
@@ -133,8 +135,10 @@ void _separateNumbDatas(_NODE *head, _INTNODE **inthead)
                 holdStr[index] = current->data;
                 index++;
                 current = current->next;
-            }
         }
+        
+   }
+       
 }
 
 /*
