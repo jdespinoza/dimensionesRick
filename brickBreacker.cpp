@@ -16,15 +16,7 @@ bool checkCollision(float Ax, float Ay, float Aw, float Ah, float Bx, float By, 
 	return true;
 }
 
-struct Brick {
 
-	float x; 
-	float y;
-	float width;
-	float height;
-	bool alive; //bandera para saber si esta viva o no
-
-};
 
 int main( int argc, char* args[] )
 {
@@ -41,7 +33,7 @@ int main( int argc, char* args[] )
   SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
 
   //titulo de la ventana
-  SDL_WM_SetCaption( "Brick Breaker", NULL );
+  SDL_WM_SetCaption( "Pong", NULL );
 
   //tamanio de la ventana
   SDL_SetVideoMode(600,400,32, SDL_OPENGL );
@@ -66,6 +58,7 @@ int main( int argc, char* args[] )
   //For handling with event
   SDL_Event event;
 
+
   /////////////////////////////////////////
   /////////////////////////////////////////
   //varibles del rectangulo (jugador)
@@ -73,6 +66,16 @@ int main( int argc, char* args[] )
   float myY = 370; //posicion Y de inicio del rectangulo (jugador)
   float width = 80; //ancho del rectangulo
   float height = 20; //largo del rectangulo
+  /////////////////////////////////////////
+  /////////////////////////////////////////
+  
+  /////////////////////////////////////////
+  /////////////////////////////////////////
+  //varibles del rectangulo (bot)
+  float myX2 = 250; //posicion X de inicio del rectangulo (jugador)
+  float myY2 = 10; //posicion Y de inicio del rectangulo (jugador)
+  float width2 = 80; //ancho del rectangulo
+  float height2 = 20; //largo del rectangulo
   /////////////////////////////////////////
   /////////////////////////////////////////
 
@@ -94,27 +97,7 @@ int main( int argc, char* args[] )
   /////////////////////////////////////////
 
 
-  /////////////////////////////////////////
-  //creacion de las barras (bricks)
-  const static int BRICKS = 45; //cantidad de barras
-
-  Brick bricks[BRICKS];
-
-  for ( int n = 0, x = 4, y = 10; n < BRICKS; n++, x+=66 ) {
-      //se estable los limites de la pantalla para que cuando se dibuje
-      //las barras no se excedan de la pantalla
-      if ( x > 560 ) {
-		x = 4;
-		y += 25;
-	  }
-	  
-	  //se establecen los valores por defecto de las barras
-      bricks[n].x = x;
-      bricks[n].y = y;
-      bricks[n].width = 60;
-      bricks[n].height = 20;
-      bricks[n].alive = true;
-    }
+  
 
 
   //ciclo principal del juego
@@ -178,6 +161,15 @@ int main( int argc, char* args[] )
       if ( myX+width > 600 ) {
 	  myX = 600-width; //Move it back so it only touches the right border
 	}
+	
+	if ( myX2 < 0 ) {
+	  myX2 = 0;
+	}
+
+	  //validacion para que la barra no se salga de la pantalla
+      if ( myX2+width2 > 600 ) {
+	  myX2 = 600-width2; //Move it back so it only touches the right border
+	}
 
       ////////////////////////////////////////////
       //logica de la bola
@@ -185,32 +177,12 @@ int main( int argc, char* args[] )
       
       //primero se mueve en el eje x
       ballX += vellX;
-
-	  //revisa todas las barras para verificar si colisiona con alguna
-      for ( int n = 0; n < BRICKS; n++ ) {
-		  //si la barra esta viva, se revisa si la bola colisiona con la barra
-	  if ( bricks[n].alive == true ) {
-	      if ( checkCollision(ballX,ballY,ballWH,ballWH,bricks[n].x,bricks[n].y,bricks[n].width, bricks[n].height) == true ) {
-			  vellX = -vellX; //efecto de rebote
-			  bricks[n].alive = false; //desaparece la barra
-			  break;
-		}
-	    }
-	}
+	  myX2 += vellX;
 
 	  //se mueve la bola en el eje Y
       ballY += vellY;
 
-	  //se repite la logica de arriba
-      for ( int n = 0; n < BRICKS; n++ ) {
-	  if ( bricks[n].alive == true ) {
-	      if ( checkCollision(ballX,ballY,ballWH,ballWH,bricks[n].x,bricks[n].y,bricks[n].width, bricks[n].height) == true ) {
-			  vellY = -vellY;
-			  bricks[n].alive = false;
-			  break;
-		}
-	    }
-	}
+	  
 
 
 	  //validacion del limite de la pantalla, para que la bola no se salga de la pantalla
@@ -226,6 +198,8 @@ int main( int argc, char* args[] )
       if ( ballY < 0 )
 	{
 	  vellY = -vellY;
+	  printf("Gano jugador 2\n");
+	  exit(0);
 	}
       
       //si la bola toca el piso, el juego se reinicia
@@ -235,6 +209,11 @@ int main( int argc, char* args[] )
 	  myY = 370; 
 	  width = 80; 
 	  height = 20;
+	  
+	  myX2 = 250; 
+	  myY2 = 10; 
+	  width2 = 80; 
+	  height2 = 20;
 	  
 	  left = false;
 	  right = false; 
@@ -246,10 +225,9 @@ int main( int argc, char* args[] )
 	  vellX = 2.5;
 	  vellY = -2.5;
 
-	  //revive todas las barras
-	  for ( int n = 0; n < BRICKS; n++ ) {
-	      bricks[n].alive = true;
-	    }
+	  printf("Gano jugador 1\n");
+	  exit(0);
+	  
 	    
 	    
 	    //presione enter para continuar
@@ -257,6 +235,10 @@ int main( int argc, char* args[] )
 
 	  //si choca con el rectangulo (jugador), rebota hacia arriba
       if ( checkCollision(ballX,ballY,ballWH,ballWH,myX,myY,width,height) == true )	{
+	  vellY = -vellY;
+	}
+	
+	if ( checkCollision(ballX,ballY,ballWH,ballWH,myX2,myY2,width2,height2) == true )	{
 	  vellY = -vellY;
 	}
       
@@ -277,6 +259,19 @@ int main( int argc, char* args[] )
       glVertex2f(myX,myY+height);
 
       glEnd(); //termina de dibujar el rectangulo
+      
+      
+      glColor4ub(122,0,255,255);
+      glBegin(GL_QUADS); //dibuja el rectangulo
+
+	  //parametros para dibujar el rectangulo
+      glVertex2f(myX2,myY2); 
+      glVertex2f(myX2+width2,myY2);
+      glVertex2f(myX2+width2,myY2+height2);
+      glVertex2f(myX2,myY2+height2);
+
+      glEnd(); //termina de dibujar el rectangulo
+      
 
       glColor4ub(255,0,0,255);
 
@@ -289,24 +284,7 @@ int main( int argc, char* args[] )
 
       glColor4ub(0,0,255,255);
 
-      glBegin(GL_QUADS); //dibuja las barras
-
-      for ( int n = 0; n < BRICKS; n++ ) {
-		  //solo se dibujan las barras que esten vivas
-	  if ( bricks[n].alive == true ) {
-	      //cada 2 barras cambia de color
-	      if ( n%2 == 0 ) {
-			   glColor4ub(122,0,255,255);
-	      }else{
-			   glColor4ub(0,0,255,255);
-	      }
-	      
-	      glVertex2f(bricks[n].x,bricks[n].y);
-	      glVertex2f(bricks[n].x+bricks[n].width,bricks[n].y);
-	      glVertex2f(bricks[n].x+bricks[n].width,bricks[n].y+bricks[n].height);
-	      glVertex2f(bricks[n].x,bricks[n].y+bricks[n].height);
-	    }
-	}
+      
 
       glEnd();
 
@@ -315,6 +293,9 @@ int main( int argc, char* args[] )
       SDL_GL_SwapBuffers();
 
       SDL_Delay(1); 
+      
+      
+      
     } 
 
   SDL_Quit();

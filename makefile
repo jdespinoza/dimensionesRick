@@ -1,3 +1,3 @@
 all:
-	g++ -o brickBreaker main.cpp -lSDLmain -lSDL -lGL -lSDL_image
+	g++ -o brickBreaker brickBreacker.cpp -lSDLmain -lSDL -lGL -lSDL_image
 
