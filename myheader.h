@@ -130,6 +130,8 @@ extern void AllocateALLMemory(_SBLOCK *, const char *);
 extern void AllocateFCFS(_SBLOCK *, const char *);
 extern void AllocatePAGING(_SBLOCK *, _VIRTMEMPAGEBLOCKS *, _MEMPAGEBLOCKS *, const char *);
 extern void AllocateSEGMENTATION(_SBLOCK *, _MEMSEGMENTBLOCKS *, const char *);
+extern int **myMalloc(int , int );
+extern int **RickMalloc(int , int );
 
 
 

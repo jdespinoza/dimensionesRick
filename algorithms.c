@@ -5,7 +5,7 @@
  */
 _MEMPAGEBLOCKS *allocateMemPageBlock(size_t size)
 {
-    _MEMPAGEBLOCKS *block = sbrk(0);
+    _MEMPAGEBLOCKS *block = (_MEMPAGEBLOCKS *)sbrk(0);
     if(sbrk(MEM_PAGE_BLOCK_SIZE + size) == (void*) - 1){ 
 		return NULL;
     }else{
@@ -31,7 +31,7 @@ void allocateNextMemPageBlock(size_t size, _MEMPAGEBLOCKS **head)
             current = current->next;
         }
         //syscall: sbrk
-        _MEMPAGEBLOCKS *newblock = sbrk(0);
+        _MEMPAGEBLOCKS *newblock = (_MEMPAGEBLOCKS *)sbrk(0);
 
         allocate_mem = sbrk(MEM_PAGE_BLOCK_SIZE + size);      
         if(allocate_mem == (void*) - 1){ }
@@ -161,11 +161,50 @@ exitLoop:
     }
 }
 
+int **myMalloc(int row, int col){
+	int **grid;
+	
+	grid = (int **)malloc(row * sizeof(int*));
+	
+	for(int i = 0; i < row; i++) {
+		grid[i] = (int *)malloc(col * sizeof(int));
+	}
+	
+	return grid;
+	
+}
+
+
+int **RickMalloc(int row, int col)
+{
+	_INTNODE *dataList;
+	_SBLOCK *s_blockHead = NULL;
+    _VIRTMEMPAGEBLOCKS *virtmempageBlocks = NULL;
+    _MEMPAGEBLOCKS *mempageBlocks = NULL;
+    
+    int size = row * col;
+    while (size > 0) {
+		_intinsertAtEnd(0,&(dataList));
+		size--;
+	}
+	
+	_PROCINTNODE *procintHead = NULL;
+    procintHead = getDataFromINTNODEList(dataList, &procintHead);
+    divideProc_Mem_IntoPageBlocks(procintHead, &virtmempageBlocks, &mempageBlocks);
+    
+    printf("\n\n\t\t[ Allocate memory ]\n\n");
+    
+    mapVirtPhyAddressPageTable(&virtmempageBlocks, &mempageBlocks);
+    
+    return myMalloc(row, col);
+	
+}
+
 /*
  * Inicio
  */
 void AllocatePAGING(_SBLOCK *s_blockHead,_VIRTMEMPAGEBLOCKS *virtmempageBlocks,
-                    _MEMPAGEBLOCKS *mempageBlocks, const char *inputFile)
+                   _MEMPAGEBLOCKS *mempageBlocks, const char *inputFile)
 {
     //se obtiene los datos del archivo
     _INTNODE *dataList = getProcessData(inputFile);

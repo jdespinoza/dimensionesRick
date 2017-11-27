@@ -1,5 +1,6 @@
 #include "SDL/SDL.h"
 #include "SDL/SDL_opengl.h"
+#include "myheader.h"
 #include <iostream>
 
 int main( int argc, char* args[] )
@@ -39,7 +40,9 @@ int main( int argc, char* args[] )
   //bandera del ciclo principal del juego
   bool isRunning = true;
   
-  int grid[600][400];
+  //int grid[600][400];
+  printf("Antes del grid\n");
+  int **grid = RickMalloc(600, 400);
   
   for (int k = 0; k < 600; k++) {
 	for (int l = 0; l < 400; l++) {
