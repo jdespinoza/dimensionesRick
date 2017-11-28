@@ -1,9 +1,11 @@
 COMPILER = gcc
-FILESYSTEM_FILES = ssfs.c fuse.h
+FILESYSTEM_FILES = fileSystem.c
 
 build: $(FILESYSTEM_FILES)
-	$(COMPILER) $(FILESYSTEM_FILES) -o ssfs `pkg-config fuse --cflags --libs`
-	echo 'To Mount: ./ssfs -f [mount point]'
+	$(COMPILER) $(FILESYSTEM_FILES) -o fileSystem `pkg-config fuse --cflags --libs`
+	echo 'To Mount: ./fileSystem -f [mount point]'
+	mkdir prueba
+	mkdir pruebaroot
 
 clean:
-	rm ssfs
+	rm fileSystem
